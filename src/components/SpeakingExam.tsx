@@ -4,6 +4,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import type { IELTSTest } from "@/lib/types";
 import type { SpeakingMarkingResult } from "@/lib/prompts";
 import { createClient, isSupabaseConfigured } from "@/lib/supabase/client";
+import { NO_VOICE_MESSAGE, waitForVoices } from "@/lib/tts";
 
 const GUIDE_SECONDS = 14 * 60;
 const PART2_PREP_SECONDS = 60;
@@ -81,6 +82,19 @@ export default function SpeakingExam({
   const [report, setReport] = useState<SpeakingReport | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [saveStatus, setSaveStatus] = useState<string | null>(null);
+  const [speakNote, setSpeakNote] = useState<string | null>(null);
+
+  // The marking error is shown beside the submit button at the bottom of
+  // a long page. When marking fails, bring it into view: otherwise the
+  // user sees nothing change where they clicked and assumes it is dead.
+  const errorRef = useRef<HTMLParagraphElement | null>(null);
+  const lastScrolledErrorRef = useRef<string | null>(null);
+  useEffect(() => {
+    if (error && error !== lastScrolledErrorRef.current) {
+      lastScrolledErrorRef.current = error;
+      errorRef.current?.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
+  }, [error]);
 
   const mediaRecorderRef = useRef<MediaRecorder | null>(null);
   const mediaStreamRef = useRef<MediaStream | null>(null);
@@ -228,8 +242,19 @@ export default function SpeakingExam({
   // Stop any recording when the component unmounts.
   useEffect(() => stopStream, [stopStream]);
 
-  const speakQuestion = useCallback((question: string) => {
-    if (!("speechSynthesis" in window)) return;
+  const speakQuestion = useCallback(async (question: string) => {
+    if (!("speechSynthesis" in window)) {
+      setSpeakNote(NO_VOICE_MESSAGE);
+      return;
+    }
+    // Without this check, speak() silently does nothing in a browser
+    // with no speech voices installed, and the user hears nothing.
+    const voices = await waitForVoices();
+    if (voices.length === 0) {
+      setSpeakNote(NO_VOICE_MESSAGE);
+      return;
+    }
+    setSpeakNote(null);
     window.speechSynthesis.cancel();
     window.speechSynthesis.speak(new SpeechSynthesisUtterance(question));
   }, []);
@@ -575,14 +600,6 @@ export default function SpeakingExam({
           {transcribeError}
         </p>
       )}
-      {error && (
-        <p
-          role="alert"
-          className="mt-3 rounded-md border border-red-300 bg-red-50 p-3 text-sm text-red-800 dark:border-red-800 dark:bg-red-950/40 dark:text-red-200"
-        >
-          {error}
-        </p>
-      )}
 
       {/* ------------------------------- Part 1 ------------------------------- */}
       {stage === "part1" && (
@@ -597,11 +614,19 @@ export default function SpeakingExam({
           <p className="mt-3 text-lg leading-relaxed">{part1Question}</p>
           <button
             type="button"
-            onClick={() => speakQuestion(part1Question)}
+            onClick={() => void speakQuestion(part1Question)}
             className="mt-3 rounded-md border border-slate-300 px-4 py-2 text-sm font-semibold hover:bg-slate-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-500 dark:border-slate-600 dark:hover:bg-slate-800"
           >
             🔊 Ask me
           </button>
+          {speakNote && (
+            <p
+              role="alert"
+              className="mt-2 rounded-md border border-amber-300 bg-amber-50 p-3 text-sm text-amber-800 dark:border-amber-800 dark:bg-amber-950/40 dark:text-amber-200"
+            >
+              {speakNote}
+            </p>
+          )}
           {recordControls(`part1-${part1Index}`)}
           {uploadInput(
             `part1-${part1Index}`,
@@ -718,11 +743,19 @@ export default function SpeakingExam({
           <p className="mt-3 text-lg leading-relaxed">{part3Question}</p>
           <button
             type="button"
-            onClick={() => speakQuestion(part3Question)}
+            onClick={() => void speakQuestion(part3Question)}
             className="mt-3 rounded-md border border-slate-300 px-4 py-2 text-sm font-semibold hover:bg-slate-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-500 dark:border-slate-600 dark:hover:bg-slate-800"
           >
             🔊 Ask me
           </button>
+          {speakNote && (
+            <p
+              role="alert"
+              className="mt-2 rounded-md border border-amber-300 bg-amber-50 p-3 text-sm text-amber-800 dark:border-amber-800 dark:bg-amber-950/40 dark:text-amber-200"
+            >
+              {speakNote}
+            </p>
+          )}
           {recordControls(`part3-${part3Index}`)}
           {uploadInput(
             `part3-${part3Index}`,
@@ -774,6 +807,15 @@ export default function SpeakingExam({
           {combinedTranscript.trim().length < 20 && (
             <p className="mt-2 text-sm text-slate-500 dark:text-slate-400">
               Record or upload at least one answer first.
+            </p>
+          )}
+          {error && (
+            <p
+              ref={errorRef}
+              role="alert"
+              className="mt-3 rounded-md border border-red-300 bg-red-50 p-3 text-sm text-red-800 dark:border-red-800 dark:bg-red-950/40 dark:text-red-200"
+            >
+              {error}
             </p>
           )}
         </div>

@@ -9,6 +9,8 @@ export interface PerQuestionEntry {
   id: string;
   type: string;
   correct: boolean;
+  /** False when the question was left unanswered (blank answer). */
+  attempted: boolean;
 }
 
 export interface CriterionEntry {
@@ -56,6 +58,14 @@ function toPerQuestion(value: unknown): PerQuestionEntry[] {
       id: typeof entry.id === "string" ? entry.id : "",
       type: typeof entry.type === "string" ? entry.type : "unknown",
       correct: entry.correct === true,
+      // The marking libs store the user's answer on every entry. A blank
+      // answer means the question was never attempted — it must not count
+      // as "missed". Entries without an answer field (older saves) keep
+      // the old behaviour and count as attempted.
+      attempted:
+        typeof entry.userAnswer === "string"
+          ? entry.userAnswer.trim().length > 0
+          : true,
     }))
     .filter((entry) => entry.id.length > 0);
 }
@@ -188,21 +198,39 @@ export function loadLocalAttempts(): Attempt[] {
   return attempts.sort((a, b) => b.createdAt.localeCompare(a.createdAt));
 }
 
-/** Incorrect-answer counts grouped by question type, most-missed first. */
-export function weakQuestionTypes(attempts: Attempt[]): { type: string; missed: number; total: number }[] {
-  const counts = new Map<string, { missed: number; total: number }>();
+/**
+ * Incorrect-answer counts grouped by question type, most-missed first.
+ * Only questions the user actually attempted count towards `missed` and
+ * `attempted`; questions left blank are reported separately as
+ * `unanswered` instead of being counted as missed.
+ */
+export function weakQuestionTypes(
+  attempts: Attempt[]
+): { type: string; missed: number; attempted: number; unanswered: number }[] {
+  const counts = new Map<
+    string,
+    { missed: number; attempted: number; unanswered: number }
+  >();
   for (const attempt of attempts) {
     for (const question of attempt.perQuestion) {
-      const entry = counts.get(question.type) ?? { missed: 0, total: 0 };
-      entry.total += 1;
-      if (!question.correct) entry.missed += 1;
+      const entry = counts.get(question.type) ?? {
+        missed: 0,
+        attempted: 0,
+        unanswered: 0,
+      };
+      if (!question.attempted) {
+        entry.unanswered += 1;
+      } else {
+        entry.attempted += 1;
+        if (!question.correct) entry.missed += 1;
+      }
       counts.set(question.type, entry);
     }
   }
   return [...counts.entries()]
     .map(([type, value]) => ({ type, ...value }))
     .filter((entry) => entry.missed > 0)
-    .sort((a, b) => b.missed - a.missed || b.total - a.total);
+    .sort((a, b) => b.missed - a.missed || b.attempted - a.attempted);
 }
 
 /** Consecutive days (ending today, or yesterday if nothing today) with >= 1 attempt. */

@@ -315,7 +315,10 @@ export default function DashboardPage() {
                   {entry.type}
                 </span>
                 <span className="text-slate-600 dark:text-slate-300">
-                  {entry.missed} missed of {entry.total}
+                  {entry.missed} missed of {entry.attempted} attempted
+                  {entry.unanswered > 0
+                    ? ` · ${entry.unanswered} unanswered`
+                    : ""}
                 </span>
               </li>
             ))}

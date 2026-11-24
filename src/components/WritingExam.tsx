@@ -192,6 +192,18 @@ export default function WritingExam({
   const [ocrStatus, setOcrStatus] = useState<Record<string, string>>({});
   const [saveStatus, setSaveStatus] = useState<string | null>(null);
 
+  // The error is shown beside the submit button at the bottom of a long
+  // exam page. When marking fails, bring it into view: otherwise the user
+  // sees nothing change where they clicked and assumes the button is dead.
+  const errorRef = useRef<HTMLParagraphElement | null>(null);
+  const lastScrolledErrorRef = useRef<string | null>(null);
+  useEffect(() => {
+    if (error && error !== lastScrolledErrorRef.current) {
+      lastScrolledErrorRef.current = error;
+      errorRef.current?.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
+  }, [error]);
+
   const task1Words = countWords(task1Text);
   const task2Words = countWords(task2Text);
   const task1Min = test.writing.task1.minWords;
@@ -256,20 +268,39 @@ export default function WritingExam({
         task: "task1" | "task2",
         text: string
       ): Promise<TaskResult> => {
-        const response = await fetch("/api/ai/mark-writing", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ testId: test.id, task, text }),
-        });
-        const data = (await response.json()) as Record<string, unknown>;
-        if (!response.ok) {
-          throw new Error(
-            typeof data.message === "string"
-              ? data.message
-              : "AI marking failed. Please try again."
-          );
+        const controller = new AbortController();
+        const timeoutId = window.setTimeout(() => controller.abort(), 90_000);
+        try {
+          const response = await fetch("/api/ai/mark-writing", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ testId: test.id, task, text }),
+            signal: controller.signal,
+          });
+          let data: Record<string, unknown> = {};
+          try {
+            data = (await response.json()) as Record<string, unknown>;
+          } catch {
+            throw new Error("AI marking failed. Please try again.");
+          }
+          if (!response.ok) {
+            throw new Error(
+              typeof data.message === "string"
+                ? data.message
+                : "AI marking failed. Please try again."
+            );
+          }
+          return data as unknown as TaskResult;
+        } catch (err) {
+          if (err instanceof DOMException && err.name === "AbortError") {
+            throw new Error(
+              "Marking took too long and timed out — please try again."
+            );
+          }
+          throw err;
+        } finally {
+          window.clearTimeout(timeoutId);
         }
-        return data as unknown as TaskResult;
       };
       const [r1, r2] = await Promise.all([
         markOne("task1", task1Text),
@@ -285,6 +316,10 @@ export default function WritingExam({
         band: writingOverallBand(r1.overallBand, r2.overallBand),
       });
     } catch (err) {
+      // Close the confirm dialog so the user is back at the submit button
+      // with the error shown right beside it, instead of staring at a
+      // dialog that looks stuck.
+      setConfirming(false);
       setError(
         err instanceof Error ? err.message : "AI marking failed. Please try again."
       );
@@ -435,15 +470,6 @@ export default function WritingExam({
         Suggested time: 20 minutes for Task 1, 40 minutes for Task 2. The test
         submits automatically when the timer reaches 0:00.
       </p>
-
-      {error && (
-        <p
-          role="alert"
-          className="mt-4 rounded-md border border-red-300 bg-red-50 p-3 text-sm text-red-800 dark:border-red-800 dark:bg-red-950/40 dark:text-red-200"
-        >
-          {error}
-        </p>
-      )}
 
       <div className="mt-6 space-y-8">
         {/* ------------------------------ Task 1 ------------------------------ */}
@@ -628,6 +654,15 @@ export default function WritingExam({
             <p className="mt-3 text-sm text-slate-600 dark:text-slate-300">
               The AI examiner is reading both answers… this can take up to a
               minute.
+            </p>
+          )}
+          {error && (
+            <p
+              ref={errorRef}
+              role="alert"
+              className="mt-3 rounded-md border border-red-300 bg-red-50 p-3 text-sm text-red-800 dark:border-red-800 dark:bg-red-950/40 dark:text-red-200"
+            >
+              {error}
             </p>
           )}
         </div>

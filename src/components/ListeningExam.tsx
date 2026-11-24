@@ -4,6 +4,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { markListening, type ListeningResult } from "@/lib/listening";
 import { createClient, isSupabaseConfigured } from "@/lib/supabase/client";
+import { NO_VOICE_MESSAGE, waitForVoices } from "@/lib/tts";
 import type { IELTSTest, ListeningSection } from "@/lib/types";
 
 const LISTENING_SECONDS = 30 * 60;
@@ -56,11 +57,16 @@ export default function ListeningExam({
   const [confirmingSubmit, setConfirmingSubmit] = useState(false);
   const [result, setResult] = useState<ListeningResult | null>(null);
   const [saveNote, setSaveNote] = useState<string | null>(null);
+  const [ttsError, setTtsError] = useState<{
+    sectionId: string;
+    message: string;
+  } | null>(null);
 
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const furthestTimeRef = useRef(0);
   const submittedRef = useRef(false);
   const ttsChunksLeftRef = useRef(0);
+  const ttsWatchdogRef = useRef<number | null>(null);
 
   const sections = test.listening.sections;
   const allPlayed = sections.every((s) => played[s.id]);
@@ -70,6 +76,10 @@ export default function ListeningExam({
   const totalQuestions = sections.reduce((n, s) => n + s.questions.length, 0);
 
   const stopPlayback = useCallback(() => {
+    if (ttsWatchdogRef.current !== null) {
+      window.clearTimeout(ttsWatchdogRef.current);
+      ttsWatchdogRef.current = null;
+    }
     if (typeof window !== "undefined" && "speechSynthesis" in window) {
       window.speechSynthesis.cancel();
     }
@@ -88,6 +98,10 @@ export default function ListeningExam({
   useEffect(() => {
     const audio = audioRef.current;
     return () => {
+      if (ttsWatchdogRef.current !== null) {
+        window.clearTimeout(ttsWatchdogRef.current);
+        ttsWatchdogRef.current = null;
+      }
       if (typeof window !== "undefined" && "speechSynthesis" in window) {
         window.speechSynthesis.cancel();
       }
@@ -188,13 +202,26 @@ export default function ListeningExam({
     []
   );
 
-  const playWithTts = useCallback((section: ListeningSection) => {
-    if (typeof window === "undefined" || !("speechSynthesis" in window)) return;
+  const playWithTts = useCallback(async (section: ListeningSection) => {
+    if (typeof window === "undefined" || !("speechSynthesis" in window)) {
+      setTtsError({ sectionId: section.id, message: NO_VOICE_MESSAGE });
+      return;
+    }
     const synth = window.speechSynthesis;
     synth.cancel();
+    // Chrome reports no voices until they finish loading; wait briefly,
+    // then tell the user plainly if this browser has no voice at all.
+    // Without this check, speak() silently does nothing in a voiceless
+    // browser: no onstart/onend/onerror ever fires, and the section
+    // stays "Not played yet" with no explanation.
+    const voices = await waitForVoices();
+    if (voices.length === 0) {
+      setTtsError({ sectionId: section.id, message: NO_VOICE_MESSAGE });
+      return;
+    }
+    setTtsError(null);
     const chunks = chunkTranscript(section.transcript);
     ttsChunksLeftRef.current = chunks.length;
-    const voices = synth.getVoices();
     const voice =
       voices.find((v) => v.lang.toLowerCase().startsWith("en-gb")) ??
       voices.find((v) => v.lang.toLowerCase().startsWith("en")) ??
@@ -202,6 +229,22 @@ export default function ListeningExam({
 
     // Mark as played as soon as playback starts: there is no replay.
     let started = false;
+    // Safety net: if speak() silently never starts, say so instead of
+    // leaving the button looking dead.
+    if (ttsWatchdogRef.current !== null) {
+      window.clearTimeout(ttsWatchdogRef.current);
+    }
+    ttsWatchdogRef.current = window.setTimeout(() => {
+      if (!started) {
+        synth.cancel();
+        setPlayingId(null);
+        setTtsError({
+          sectionId: section.id,
+          message:
+            "The audio did not start in this browser. Try Chrome or Edge on a computer — or read the transcript in the review at the end and answer from it.",
+        });
+      }
+    }, 5000);
     chunks.forEach((chunk, index) => {
       const utterance = new SpeechSynthesisUtterance(chunk);
       utterance.rate = 0.95;
@@ -209,6 +252,10 @@ export default function ListeningExam({
       utterance.onstart = () => {
         if (!started) {
           started = true;
+          if (ttsWatchdogRef.current !== null) {
+            window.clearTimeout(ttsWatchdogRef.current);
+            ttsWatchdogRef.current = null;
+          }
           setPlayed((prev) => ({ ...prev, [section.id]: true }));
           setPlayingId(section.id);
         }
@@ -233,7 +280,7 @@ export default function ListeningExam({
       if (section.audioUrl) {
         playWithAudio(section);
       } else {
-        playWithTts(section);
+        void playWithTts(section);
       }
     },
     [phase, played, playingId, playWithAudio, playWithTts]
@@ -458,6 +505,14 @@ export default function ListeningExam({
                   Practice audio — text-to-speech reading of the transcript.
                   Upload a real recording in the Admin panel for the full exam
                   experience.
+                </p>
+              )}
+              {ttsError?.sectionId === section.id && (
+                <p
+                  role="alert"
+                  className="mt-2 rounded-md border border-amber-300 bg-amber-50 p-3 text-sm text-amber-800 dark:border-amber-800 dark:bg-amber-950/40 dark:text-amber-200"
+                >
+                  {ttsError.message}
                 </p>
               )}
               {phase === "transfer" && (
