@@ -1,0 +1,900 @@
+{
+  "id": "test-1",
+  "title": "Sample Test 1 — Academic",
+  "track": "academic",
+  "listening": {
+    "sections": [
+      {
+        "id": "L1",
+        "number": 1,
+        "title": "Booking a sports facility",
+        "audioUrl": null,
+        "transcript": "Good morning, Riverside Community Sports Centre. How can I help you?\nHello, my name is Daniel Carter. I would like to book a badminton court for a regular game, please.\nOf course, Mr Carter. We have courts available most evenings. Which day were you thinking of?\nProbably Thursday evenings, if possible. There are four of us, and we would like to play from about seven o'clock.\nLet me check. Yes, Court 3 is free on Thursdays from 7.00 to 8.30. Would that suit you?\nThat sounds perfect. How much does it cost?\nFor members, it is 12 pounds per court per hour, and for non-members it is 18 pounds per hour. If you become a member, you also get a discount on the fitness classes.\nI see. What is the membership fee?\nMembership is 35 pounds a month, or 320 pounds for the whole year. The annual option works out cheaper if you come every week.\nI think I will start with monthly membership for now. Can I join today?\nYes, certainly. I will need a few details. Could you spell your surname for me, please?\nIt is C-A-R-T-E-R.\nThank you. And what is your date of birth?\nThe 14th of March, 1998.\nAnd your address?\n42 Willow Lane, Riverside. The postcode is RV4 7PT.\nThank you. Do you have an email address we can use to send your booking confirmation?\nYes, it is daniel.carter82@postmail.com.\nAnd a phone number?\n07700 900 214.\nGreat. Now, would you like to book just this Thursday, or would you like a regular weekly booking?\nA regular weekly booking would be best, starting this Thursday, the 5th of June.\nThat is fine. You will need to pay for the first session today, which is 18 pounds for an hour and a half at the member rate. You can pay by card or in cash at reception.\nI will pay by card when I arrive. Is there anything else I need to know?\nJust a couple of things. Please bring indoor shoes, as outdoor shoes are not allowed on the courts. Also, rackets can be hired for 3 pounds each if you need them, but shuttlecocks are included in the court price.\nThat is good to know. We have our own rackets. What time should we arrive?\nPlease arrive ten minutes early so you can collect your membership card from reception. The centre closes at 10.30 in the evening.\nPerfect. Thank you very much for your help.\nYou are welcome, Mr Carter. We look forward to seeing you on Thursday.",
+        "questions": [
+          {
+            "id": "L1Q1",
+            "type": "completion",
+            "prompt": "Name of caller: Daniel ______",
+            "answer": "Carter",
+            "alternatives": [
+              "carter"
+            ]
+          },
+          {
+            "id": "L1Q2",
+            "type": "completion",
+            "prompt": "Day of the regular booking: ______",
+            "answer": "Thursday",
+            "alternatives": [
+              "thursday"
+            ]
+          },
+          {
+            "id": "L1Q3",
+            "type": "completion",
+            "prompt": "Court number booked: Court ______",
+            "answer": "3",
+            "alternatives": [
+              "three"
+            ]
+          },
+          {
+            "id": "L1Q4",
+            "type": "completion",
+            "prompt": "Time of the booking: ______ to 8.30",
+            "answer": "7.00",
+            "alternatives": [
+              "7",
+              "7 pm",
+              "7.00 pm",
+              "seven"
+            ]
+          },
+          {
+            "id": "L1Q5",
+            "type": "mcq",
+            "prompt": "How much does court hire cost per hour for members?",
+            "options": [
+              "A 12 pounds",
+              "B 18 pounds",
+              "C 35 pounds",
+              "D 3 pounds"
+            ],
+            "answer": "A 12 pounds"
+          },
+          {
+            "id": "L1Q6",
+            "type": "completion",
+            "prompt": "Monthly membership fee: ______ pounds",
+            "answer": "35",
+            "alternatives": [
+              "35 pounds"
+            ]
+          },
+          {
+            "id": "L1Q7",
+            "type": "completion",
+            "prompt": "Postcode: RV4 ______",
+            "answer": "7PT",
+            "alternatives": [
+              "7pt"
+            ]
+          },
+          {
+            "id": "L1Q8",
+            "type": "completion",
+            "prompt": "Date of the first booking: the 5th of ______",
+            "answer": "June",
+            "alternatives": [
+              "june"
+            ]
+          },
+          {
+            "id": "L1Q9",
+            "type": "mcq",
+            "prompt": "What must players wear on the courts?",
+            "options": [
+              "A Outdoor shoes",
+              "B Indoor shoes",
+              "C Hired shoes",
+              "D Sports socks"
+            ],
+            "answer": "B Indoor shoes"
+          },
+          {
+            "id": "L1Q10",
+            "type": "mcq",
+            "prompt": "What time does the centre close?",
+            "options": [
+              "A 8.30 pm",
+              "B 9.00 pm",
+              "C 10.00 pm",
+              "D 10.30 pm"
+            ],
+            "answer": "D 10.30 pm"
+          }
+        ]
+      },
+      {
+        "id": "L2",
+        "number": 2,
+        "title": "Guided tour of a museum",
+        "audioUrl": null,
+        "transcript": "Good afternoon, everyone, and welcome to the Harfield Museum of Industry. My name is Sarah Whitfield, and I will be your guide for the next hour. Before we begin, let me tell you a little about the building itself. The museum was originally a textile mill, built in 1874, and it operated as a mill for almost ninety years before it closed in 1962. It stood empty for nearly twenty years, until a group of local volunteers saved it from demolition in 1981. After five years of restoration work, it opened as a museum in 1986.\n\nWe will start our tour on the ground floor, in the Engine Room. Here you can see the original steam engine, which powered the whole mill. It was built in Manchester in 1872 and it is still in working order. Twice a day, at eleven in the morning and at three in the afternoon, our volunteers run the engine for visitors, so if you stay until three, you will be able to see it in action.\n\nNext, we will move to the Weaving Gallery on the first floor. This room contains twelve looms, and most of them date from the early twentieth century. The oldest loom here was made in 1903. In this gallery, you can watch our demonstrators weaving cloth using the traditional methods, and you are welcome to ask them questions. Please do not touch the looms while they are working, as the moving parts can be dangerous.\n\nAfter the Weaving Gallery, we will visit the Workers' Cottages exhibition. This shows how mill workers and their families lived in the 1890s. The exhibition includes a small kitchen, a bedroom, and a wash house. It is quite a contrast to the way we live today: most families shared one cold tap, and there was no indoor bathroom. Children often worked in the mill from the age of twelve, which seems shocking to us now, but it was normal at the time.\n\nOur final stop will be the top floor, where we have a special exhibition called Threads of Change. It explores how the textile industry in this region declined after the Second World War, as cheaper cloth began to arrive from overseas. The exhibition runs until the end of September, and it includes photographs, letters, and recorded interviews with former mill workers.\n\nA few practical details before we set off. The museum shop is on the ground floor, near the entrance, and the cafe is on the first floor. The cafe serves light lunches until two o'clock. Photography is allowed throughout the museum, but please do not use a flash. The tour will last about one hour, and there will be time for questions at the end. If you need the toilets, they are on each floor, next to the stairs. Let us begin.",
+        "questions": [
+          {
+            "id": "L2Q1",
+            "type": "mcq",
+            "prompt": "What was the museum building originally?",
+            "options": [
+              "A A school",
+              "B A textile mill",
+              "C A railway station",
+              "D A hospital"
+            ],
+            "answer": "B A textile mill"
+          },
+          {
+            "id": "L2Q2",
+            "type": "completion",
+            "prompt": "The mill was built in ______",
+            "answer": "1874",
+            "alternatives": []
+          },
+          {
+            "id": "L2Q3",
+            "type": "completion",
+            "prompt": "The museum opened in ______",
+            "answer": "1986",
+            "alternatives": []
+          },
+          {
+            "id": "L2Q4",
+            "type": "mcq",
+            "prompt": "When is the steam engine run for visitors?",
+            "options": [
+              "A At 10 am and 2 pm",
+              "B At 11 am and 3 pm",
+              "C At 12 pm and 4 pm",
+              "D At 9 am and 5 pm"
+            ],
+            "answer": "B At 11 am and 3 pm"
+          },
+          {
+            "id": "L2Q5",
+            "type": "completion",
+            "prompt": "The oldest loom in the Weaving Gallery was made in ______",
+            "answer": "1903",
+            "alternatives": []
+          },
+          {
+            "id": "L2Q6",
+            "type": "mcq",
+            "prompt": "Why should visitors not touch the looms?",
+            "options": [
+              "A They are very old and fragile",
+              "B The moving parts can be dangerous",
+              "C They are being repaired",
+              "D They belong to the demonstrators"
+            ],
+            "answer": "B The moving parts can be dangerous"
+          },
+          {
+            "id": "L2Q7",
+            "type": "completion",
+            "prompt": "Most mill families shared one cold ______",
+            "answer": "tap",
+            "alternatives": [
+              "cold tap"
+            ]
+          },
+          {
+            "id": "L2Q8",
+            "type": "mcq",
+            "prompt": "What is the special exhibition on the top floor called?",
+            "options": [
+              "A Threads of Change",
+              "B Life in the Mill",
+              "C The Weaving Gallery",
+              "D Voices of the Past"
+            ],
+            "answer": "A Threads of Change"
+          },
+          {
+            "id": "L2Q9",
+            "type": "completion",
+            "prompt": "The special exhibition runs until the end of ______",
+            "answer": "September",
+            "alternatives": [
+              "september"
+            ]
+          },
+          {
+            "id": "L2Q10",
+            "type": "mcq",
+            "prompt": "Where is the cafe?",
+            "options": [
+              "A On the ground floor",
+              "B On the top floor",
+              "C On the first floor",
+              "D Outside the museum"
+            ],
+            "answer": "C On the first floor"
+          }
+        ]
+      },
+      {
+        "id": "L3",
+        "number": 3,
+        "title": "Discussing a group assignment",
+        "audioUrl": null,
+        "transcript": "Tutor: Good morning. Thank you both for coming. Today we need to discuss your group assignment for the Environmental Science module. The deadline is the 20th of June, so you have just over three weeks left. How is the research going?\nMaya: We have made a good start. We decided to focus on plastic waste in the River Trent, and we have collected quite a lot of data already. We did a survey of litter along a two-kilometre stretch of the riverbank, and we counted over 800 items.\nTutor: That is a useful starting point. How are you dividing the work between you?\nJames: Maya is responsible for the fieldwork and the data analysis, and I am looking at the background research and the policy side. We are also sharing the writing.\nTutor: That sounds sensible, but I would like to see a clearer plan. Have you written an outline yet?\nMaya: Yes, we have a draft outline. The introduction will explain why plastic pollution is a problem for rivers. Then there will be a section on our methods, followed by the results and a discussion of what they mean.\nJames: We are a bit unsure about the discussion section, though. We found that plastic bottles were the most common item, followed by food wrappers and bags. But we are not sure how to explain why bottles are so common.\nTutor: Think about the sources. Are there shops, cafes, or picnic areas near that stretch of the river? People may be buying drinks and leaving the bottles behind. You could also compare your results with other studies of river litter, to see whether the pattern is similar elsewhere.\nMaya: That is a good idea. We found one study of the River Thames which also found bottles at the top of the list, so we can mention that.\nTutor: Good. What about your recommendations? The assignment asks you to suggest practical solutions.\nJames: We were thinking of suggesting more bins along the riverbank, and a deposit return scheme for bottles. We also want to suggest a regular clean-up event involving local schools.\nTutor: Those are practical, but try to be specific. How many bins, and where exactly? And who would pay for the deposit scheme? The marker will want to see that you have thought about costs and who is responsible.\nMaya: We could look at the deposit scheme in Germany as an example. It has been running for many years, and the return rate for bottles is over 95 percent.\nTutor: That would strengthen your argument. Now, what about referencing? I noticed in your draft that some of your sources are websites, and you need to check that they are reliable.\nJames: Yes, we used a few news articles and a blog. Should we replace those with academic sources?\nTutor: Wherever possible, yes. News articles can be useful for recent information, but the main evidence should come from peer-reviewed journals and official reports. Aim for at least ten academic sources in your reference list.\nMaya: We have six so far, so we need to find four more.\nTutor: That should be possible. The library has a good collection on waste management. One more thing: remember that the presentation is worth 20 percent of the mark, and it is on the 25th of June, five days after the written deadline. You will each speak for ten minutes, followed by questions.\nJames: We had forgotten about the presentation. We will need to prepare slides as well.\nTutor: Yes, and make sure you practise together. A common problem is that one person speaks for much longer than the other. Finally, please send me your updated outline by Friday, so I can give you feedback before you start writing the full draft.\nMaya: We will do that. Thank you for your help.\nTutor: You are welcome. You are making good progress; just keep the plan clear and the evidence strong.\n\nTutor: Before you go, let me remind you about the library workshop on Thursday. It covers how to search academic databases, which will help you find those extra sources more quickly.\nMaya: That sounds useful. What time is it?\nTutor: It starts at two o'clock in the library training room, and it lasts for about an hour. You do not need to book in advance; you can just turn up. Bring your laptops so you can practise the searches during the session.\nJames: We will be there. Thank you again for meeting us today.\nTutor: My pleasure. Keep in touch if you get stuck, and do not leave the writing until the last week.",
+        "questions": [
+          {
+            "id": "L3Q1",
+            "type": "completion",
+            "prompt": "The assignment deadline is the 20th of ______",
+            "answer": "June",
+            "alternatives": [
+              "june"
+            ]
+          },
+          {
+            "id": "L3Q2",
+            "type": "completion",
+            "prompt": "The students are studying plastic waste in the River ______",
+            "answer": "Trent",
+            "alternatives": [
+              "trent"
+            ]
+          },
+          {
+            "id": "L3Q3",
+            "type": "mcq",
+            "prompt": "How many items of litter did the students count?",
+            "options": [
+              "A Over 200 items",
+              "B Over 500 items",
+              "C Over 800 items",
+              "D Over 1,000 items"
+            ],
+            "answer": "C Over 800 items"
+          },
+          {
+            "id": "L3Q4",
+            "type": "mcq",
+            "prompt": "Who is responsible for the data analysis?",
+            "options": [
+              "A James",
+              "B Maya",
+              "C The tutor",
+              "D Both students equally"
+            ],
+            "answer": "B Maya"
+          },
+          {
+            "id": "L3Q5",
+            "type": "mcq",
+            "prompt": "What was the most common item of litter?",
+            "options": [
+              "A Food wrappers",
+              "B Plastic bags",
+              "C Plastic bottles",
+              "D Cups"
+            ],
+            "answer": "C Plastic bottles"
+          },
+          {
+            "id": "L3Q6",
+            "type": "completion",
+            "prompt": "The return rate for bottles in Germany is over ______ percent",
+            "answer": "95",
+            "alternatives": [
+              "95 percent",
+              "95%"
+            ]
+          },
+          {
+            "id": "L3Q7",
+            "type": "mcq",
+            "prompt": "How many academic sources should the students aim for?",
+            "options": [
+              "A At least six",
+              "B At least eight",
+              "C At least ten",
+              "D At least twelve"
+            ],
+            "answer": "C At least ten"
+          },
+          {
+            "id": "L3Q8",
+            "type": "mcq",
+            "prompt": "What is the presentation worth?",
+            "options": [
+              "A 10 percent of the mark",
+              "B 20 percent of the mark",
+              "C 25 percent of the mark",
+              "D 50 percent of the mark"
+            ],
+            "answer": "B 20 percent of the mark"
+          },
+          {
+            "id": "L3Q9",
+            "type": "completion",
+            "prompt": "The presentation is on the 25th of ______",
+            "answer": "June",
+            "alternatives": [
+              "june"
+            ]
+          },
+          {
+            "id": "L3Q10",
+            "type": "mcq",
+            "prompt": "What does the tutor ask the students to send by Friday?",
+            "options": [
+              "A The full draft",
+              "B The presentation slides",
+              "C The updated outline",
+              "D The reference list"
+            ],
+            "answer": "C The updated outline"
+          }
+        ]
+      },
+      {
+        "id": "L4",
+        "number": 4,
+        "title": "The history of urban farming",
+        "audioUrl": null,
+        "transcript": "Today I would like to talk about the history of urban farming, a practice that many people think of as very modern, but which in fact has a long history. Urban farming means growing food inside a city, on rooftops, in community gardens, on balconies, or on small plots of unused land. Although it has become fashionable in the last twenty years, people have grown food in cities for centuries.\n\nThe first clear examples come from the nineteenth century. During the Industrial Revolution, large numbers of people moved from the countryside into cities to work in factories. Many of them had no garden and very little money, so they began to grow vegetables on small pieces of land near their homes. In Britain, these plots were called allotments. By 1914, there were more than 600,000 allotments in Britain, and they were an important source of fresh food for working families.\n\nUrban farming became even more important during the two world wars. When food imports were disrupted, governments encouraged citizens to grow their own food. In Britain, the Dig for Victory campaign urged people to turn gardens, parks, and even sports fields into vegetable plots. In the United States, Victory Gardens had a similar purpose. By 1944, around 40 percent of all fresh vegetables eaten in America were grown in these gardens. After the wars ended, however, most of these gardens were abandoned as food supplies returned to normal and cities expanded.\n\nThe next major phase began in the 1970s, when community gardens appeared in many North American cities. In New York, for example, residents began to clear empty, derelict lots and turn them into gardens. At first, the city authorities were unsure what to do, but eventually many of these gardens were given legal protection. Similar movements appeared in European cities, where people wanted fresh food and a stronger sense of community.\n\nIn the 1990s and 2000s, a new idea emerged: vertical farming. This involves growing crops indoors, in stacked layers, under artificial light, often without soil. The first commercial vertical farms were built in Japan and Singapore, where land is scarce and expensive. Supporters argue that vertical farms use far less water than traditional farming, they can produce food all year round, and they reduce the distance food must travel. Critics, however, point out that they use a great deal of electricity for lighting, and that they are only suitable for certain crops, such as lettuce and herbs, rather than for staple foods like wheat or rice.\n\nToday, urban farming takes many forms, from small community gardens to large commercial rooftop farms. In Paris, for example, there is a rooftop farm of 14,000 square metres on top of an exhibition centre, which grows vegetables for local restaurants. In Singapore, the government aims to produce 30 percent of the country's food locally by 2030, and urban farms are central to that plan. Researchers are now studying whether urban farming can improve food security, reduce carbon emissions, and improve people's health and wellbeing. The evidence is still mixed, but one thing is clear: growing food in cities is no longer a wartime emergency measure; it has become a permanent part of how many cities feed themselves.\n\nThere are, of course, challenges that remain. Urban farms often struggle to make a profit, because city land is expensive and labour costs are high. Some projects depend on volunteers or on grants from local councils, and when that funding ends, the farm may close. There is also the question of scale. Even the largest rooftop farms produce only a small fraction of the food a city needs, so urban farming cannot replace traditional rural farming. Its supporters accept this point, but they argue that its value is not only measured in tonnes of food. A community garden, they say, also teaches children where food comes from, gives older people a reason to meet their neighbours, and turns an empty plot of land into something useful and attractive. In that sense, the history of urban farming is not just a story about food production; it is also a story about how people in cities have tried, in different periods, to stay connected to the land, even as they lived further and further away from it.",
+        "questions": [
+          {
+            "id": "L4Q1",
+            "type": "mcq",
+            "prompt": "In Britain, small plots for growing vegetables were called",
+            "options": [
+              "A victory gardens",
+              "B community gardens",
+              "C allotments",
+              "D rooftop farms"
+            ],
+            "answer": "C allotments"
+          },
+          {
+            "id": "L4Q2",
+            "type": "completion",
+            "prompt": "By 1914, there were more than ______ allotments in Britain",
+            "answer": "600,000",
+            "alternatives": [
+              "600000"
+            ]
+          },
+          {
+            "id": "L4Q3",
+            "type": "mcq",
+            "prompt": "What was the British wartime campaign called?",
+            "options": [
+              "A Grow for Britain",
+              "B Dig for Victory",
+              "C Food for All",
+              "D Gardens of War"
+            ],
+            "answer": "B Dig for Victory"
+          },
+          {
+            "id": "L4Q4",
+            "type": "completion",
+            "prompt": "By 1944, around ______ percent of fresh vegetables eaten in America were grown in Victory Gardens",
+            "answer": "40",
+            "alternatives": [
+              "40 percent",
+              "40%"
+            ]
+          },
+          {
+            "id": "L4Q5",
+            "type": "mcq",
+            "prompt": "When did community gardens first appear in many North American cities?",
+            "options": [
+              "A In the 1950s",
+              "B In the 1960s",
+              "C In the 1970s",
+              "D In the 1980s"
+            ],
+            "answer": "C In the 1970s"
+          },
+          {
+            "id": "L4Q6",
+            "type": "mcq",
+            "prompt": "Where were the first commercial vertical farms built?",
+            "options": [
+              "A In Britain and France",
+              "B In Japan and Singapore",
+              "C In the United States and Canada",
+              "D In Australia and New Zealand"
+            ],
+            "answer": "B In Japan and Singapore"
+          },
+          {
+            "id": "L4Q7",
+            "type": "mcq",
+            "prompt": "What is one advantage of vertical farms mentioned in the lecture?",
+            "options": [
+              "A They use far less water than traditional farming",
+              "B They can grow wheat and rice easily",
+              "C They use very little electricity",
+              "D They need large areas of land"
+            ],
+            "answer": "A They use far less water than traditional farming"
+          },
+          {
+            "id": "L4Q8",
+            "type": "mcq",
+            "prompt": "What is one criticism of vertical farms?",
+            "options": [
+              "A They only work in cold climates",
+              "B They use a great deal of electricity for lighting",
+              "C They produce food only in summer",
+              "D They need a lot of soil"
+            ],
+            "answer": "B They use a great deal of electricity for lighting"
+          },
+          {
+            "id": "L4Q9",
+            "type": "completion",
+            "prompt": "The rooftop farm in Paris covers ______ square metres",
+            "answer": "14,000",
+            "alternatives": [
+              "14000"
+            ]
+          },
+          {
+            "id": "L4Q10",
+            "type": "completion",
+            "prompt": "Singapore aims to produce 30 percent of its food locally by ______",
+            "answer": "2030",
+            "alternatives": []
+          }
+        ]
+      }
+    ]
+  },
+  "reading": {
+    "passages": [
+      {
+        "id": "R1",
+        "title": "Sleep and memory",
+        "text": "Sleep is often treated as a passive state, a period in which the brain simply switches off until morning. Modern neuroscience tells a very different story. During sleep, the brain is highly active, sorting, strengthening, and reorganising the memories formed during the day. Without enough sleep, new information fades quickly, while a good night of sleep can make a memory clearer and easier to recall the next day. Researchers now believe that sleep is not a break from learning; it is an essential part of it.\n\nThe link between sleep and memory begins with the way memories are first formed. When we learn something new, such as a list of words or a route through an unfamiliar town, a network of brain cells becomes active. This early memory is fragile, however, and it can easily be disrupted by new information or by tiredness. During the first hours of sleep, the brain replays these patterns of activity, almost as if it were practising the experience again. This replay helps to move the memory from a temporary store into a more stable, long-term form.\n\nNot all sleep is the same, and different stages appear to support different kinds of memory. Deep sleep, which occurs mainly in the first half of the night, is especially important for facts and events. During deep sleep, slow waves of electrical activity sweep across the brain, and researchers have found that stronger slow waves are linked to better recall the following morning. Dream sleep, which becomes more common later in the night, seems to help with skills and with creative problem solving. People who are learning a musical instrument or a new language, for example, often improve after a night that includes plenty of dream sleep.\n\nThe importance of sleep becomes clearest when it is taken away. In one well-known study, two groups of volunteers were asked to learn a set of word pairs in the evening. One group then slept for eight hours, while the other stayed awake all night. When both groups were tested the next morning, the group that had slept remembered significantly more word pairs. A similar pattern has been found in studies of motor skills: people who sleep after practising a task, such as typing a sequence on a keyboard, perform it faster and more accurately the next day than people who stay awake.\n\nSleep deprivation does more than weaken new memories; it also affects attention and judgement. After a single night without sleep, people find it harder to concentrate, they react more slowly, and they are more likely to make mistakes. Over a longer period, regular short sleep has been linked to poorer performance at school and at work, and to a higher risk of health problems. For this reason, many sleep researchers argue that the common habit of cutting sleep short in order to study or work longer is counterproductive. The hours gained are often lost through weaker learning and slower thinking.\n\nThe practical message is straightforward. Students who revise late into the night and then sleep for only a few hours are likely to remember less than students who study earlier and then sleep well. The same applies to anyone learning a new skill at work. Short naps can also help: a nap of twenty to thirty minutes has been shown to improve alertness and memory for information learned just before the nap. Longer naps, however, can leave people feeling groggy, so timing matters.\n\nScientists are still trying to understand exactly how sleep strengthens memories, and many questions remain unanswered. It is not yet clear, for example, why some memories are kept while others are forgotten during sleep, or how the brain decides which experiences are worth storing. What is clear is that sleep is an active, selective process, and that a society which values long working hours over rest may be paying a hidden price in learning, creativity, and health.\n\nIn the coming years, researchers hope to learn more about how to improve sleep itself. Some studies are testing whether gentle sounds played during deep sleep can strengthen slow waves and improve memory, while others are looking at how light, temperature, and daily routine affect the quality of sleep. If these approaches work, they could help students, shift workers, and older people who often struggle to sleep well. For now, however, the simplest advice remains the most reliable: keep regular hours, avoid screens late at night, and treat sleep as part of learning, not as time wasted.",
+        "questions": [
+          {
+            "id": "R1Q1",
+            "type": "tfng",
+            "prompt": "Sleep is a passive state in which the brain switches off.",
+            "answer": "False",
+            "evidence": "During sleep, the brain is highly active, sorting, strengthening, and reorganising the memories formed during the day."
+          },
+          {
+            "id": "R1Q2",
+            "type": "tfng",
+            "prompt": "A good night of sleep can make a memory easier to recall the next day.",
+            "answer": "True",
+            "evidence": "Without enough sleep, new information fades quickly, while a good night of sleep can make a memory clearer and easier to recall the next day."
+          },
+          {
+            "id": "R1Q3",
+            "type": "tfng",
+            "prompt": "Early memories are strong and difficult to disrupt.",
+            "answer": "False",
+            "evidence": "This early memory is fragile, however, and it can easily be disrupted by new information or by tiredness."
+          },
+          {
+            "id": "R1Q4",
+            "type": "tfng",
+            "prompt": "Deep sleep occurs mainly in the first half of the night.",
+            "answer": "True",
+            "evidence": "Deep sleep, which occurs mainly in the first half of the night, is especially important for facts and events."
+          },
+          {
+            "id": "R1Q5",
+            "type": "tfng",
+            "prompt": "Dream sleep helps mainly with facts and events.",
+            "answer": "False",
+            "evidence": "Dream sleep, which becomes more common later in the night, seems to help with skills and with creative problem solving."
+          },
+          {
+            "id": "R1Q6",
+            "type": "mcq",
+            "prompt": "In the word-pair study, what happened to the group that slept for eight hours?",
+            "options": [
+              "A They remembered significantly more word pairs",
+              "B They remembered the same number as the awake group",
+              "C They remembered fewer word pairs",
+              "D They were not tested the next morning"
+            ],
+            "answer": "A They remembered significantly more word pairs",
+            "evidence": "When both groups were tested the next morning, the group that had slept remembered significantly more word pairs."
+          },
+          {
+            "id": "R1Q7",
+            "type": "tfng",
+            "prompt": "Sleeping after practising a motor task improves performance the next day.",
+            "answer": "True",
+            "evidence": "people who sleep after practising a task, such as typing a sequence on a keyboard, perform it faster and more accurately the next day than people who stay awake."
+          },
+          {
+            "id": "R1Q8",
+            "type": "tfng",
+            "prompt": "One night without sleep has no effect on concentration.",
+            "answer": "False",
+            "evidence": "After a single night without sleep, people find it harder to concentrate, they react more slowly, and they are more likely to make mistakes."
+          },
+          {
+            "id": "R1Q9",
+            "type": "mcq",
+            "prompt": "According to the passage, cutting sleep short to study longer is",
+            "options": [
+              "A an effective way to learn more",
+              "B recommended by sleep researchers",
+              "C counterproductive",
+              "D harmless if done occasionally"
+            ],
+            "answer": "C counterproductive",
+            "evidence": "many sleep researchers argue that the common habit of cutting sleep short in order to study or work longer is counterproductive."
+          },
+          {
+            "id": "R1Q10",
+            "type": "completion",
+            "prompt": "A nap of twenty to thirty minutes has been shown to improve alertness and ______ (NO MORE THAN TWO WORDS)",
+            "answer": "memory",
+            "alternatives": [
+              "memory for information"
+            ],
+            "evidence": "a nap of twenty to thirty minutes has been shown to improve alertness and memory for information learned just before the nap."
+          },
+          {
+            "id": "R1Q11",
+            "type": "tfng",
+            "prompt": "Longer naps always leave people feeling refreshed.",
+            "answer": "False",
+            "evidence": "Longer naps, however, can leave people feeling groggy, so timing matters."
+          },
+          {
+            "id": "R1Q12",
+            "type": "mcq",
+            "prompt": "What is still not clear to scientists?",
+            "options": [
+              "A Whether sleep helps memory at all",
+              "B Why some memories are kept while others are forgotten during sleep",
+              "C Whether deep sleep occurs at night",
+              "D Whether naps improve alertness"
+            ],
+            "answer": "B Why some memories are kept while others are forgotten during sleep",
+            "evidence": "It is not yet clear, for example, why some memories are kept while others are forgotten during sleep, or how the brain decides which experiences are worth storing."
+          },
+          {
+            "id": "R1Q13",
+            "type": "ynng",
+            "prompt": "The writer believes that a society which values long working hours over rest may be paying a hidden price.",
+            "answer": "Yes",
+            "evidence": "What is clear is that sleep is an active, selective process, and that a society which values long working hours over rest may be paying a hidden price in learning, creativity, and health."
+          }
+        ]
+      },
+      {
+        "id": "R2",
+        "title": "The revival of traditional crafts",
+        "text": "In many towns across the world, traditional crafts that were once part of everyday life are quietly disappearing. Hand weaving, pottery, basket making, and wood carving are practised by fewer and fewer people, and in some places the skills have already been lost. Yet in recent years, a surprising revival has begun. Young designers, small workshops, and community projects are rediscovering old techniques and finding new markets for handmade goods. This revival raises an important question: can traditional crafts survive in a modern economy, or are they destined to become museum exhibits?\n\nOne reason crafts declined is simple economics. Factory-made goods are cheaper and faster to produce than handmade ones. A machine can weave in an hour what a hand weaver might take a day to complete, and a mass-produced cup costs a fraction of the price of a pot thrown on a wheel. As incomes rose and cheap goods became widely available, many customers chose price over craftsmanship, and many makers could no longer earn a living from their work. Young people, in particular, left villages for jobs in factories and offices, and the chain of knowledge that passed from master to apprentice was broken.\n\nA second reason is changing taste. For much of the twentieth century, handmade objects were seen as old-fashioned, while factory products seemed modern and desirable. A plastic chair or a printed textile was a sign of progress, while a hand-carved chair belonged, in many people's minds, to the past. Schools stopped teaching craft skills, and in many countries, craft was removed from the curriculum altogether. The result was a generation that had little contact with making things by hand.\n\nThe revival began, in part, as a reaction to this loss. As more goods became identical and disposable, some consumers began to value objects that were unique, durable, and made with care. A handmade bowl, with slight differences in shape and colour, tells a story that a factory bowl cannot. At the same time, concerns about waste and the environment have made people more interested in products that last longer and can be repaired. A well-made wooden chair, for example, can be used for decades, while a cheap flat-pack chair may be thrown away after a few years.\n\nTechnology has also played an unexpected role in the revival. Social media allows a potter in a small village to show her work to customers all over the world, and online shops make it possible to sell directly, without a middleman taking most of the profit. Short videos of weaving, carving, or glass blowing attract large audiences, and workshops that once struggled to find customers now receive orders from other countries. In this way, the internet, which many feared would destroy local crafts, has helped to keep some of them alive.\n\nGovernments and charities have added support. In several countries, craft centres offer training for young people, and grants help small workshops buy equipment or attend trade fairs. Some regions have created labels that certify that a product is genuinely handmade in that area, which helps customers trust what they are buying and allows makers to charge a fair price. Tourism has also helped: visitors often want to buy a local craft as a souvenir, and craft demonstrations have become a popular attraction.\n\nDespite this progress, the future of traditional crafts remains uncertain. The revival is real, but it is small compared with the scale of factory production, and many crafts still depend on a handful of elderly makers. If their skills are not passed on, they will disappear within a generation. The challenge, therefore, is not simply to sell more handmade goods, but to train new makers and to make craft a realistic career. Those who believe the revival will last argue that people will always value objects made by human hands. Those who are doubtful point out that a craft survives only if it can pay for itself, and that nostalgia alone will not keep a workshop open.\n\nOne encouraging sign is that many young makers are now combining old techniques with new ideas. A weaver may use a traditional loom but design patterns for modern clothing, while a potter may sell online and take orders from customers she will never meet. This mixture of old and new may be the key to survival. A craft that never changes can become a curiosity, while a craft that adapts can remain useful and relevant. Whether the current revival grows or fades will depend on customers, on training, and on whether societies decide that handmade things are worth paying for.",
+        "questions": [
+          {
+            "id": "R2Q1",
+            "type": "matching-headings",
+            "prompt": "Choose the correct heading for the paragraph beginning 'One reason crafts declined is simple economics.'",
+            "options": [
+              "i The cost problem",
+              "ii Changing tastes",
+              "iii Help from the internet",
+              "iv Government support"
+            ],
+            "answer": "i The cost problem",
+            "evidence": "One reason crafts declined is simple economics."
+          },
+          {
+            "id": "R2Q2",
+            "type": "tfng",
+            "prompt": "Factory-made goods are cheaper and faster to produce than handmade ones.",
+            "answer": "True",
+            "evidence": "Factory-made goods are cheaper and faster to produce than handmade ones."
+          },
+          {
+            "id": "R2Q3",
+            "type": "completion",
+            "prompt": "A machine can weave in an hour what a hand weaver might take a ______ to complete (ONE WORD ONLY)",
+            "answer": "day",
+            "alternatives": [
+              "a day"
+            ],
+            "evidence": "A machine can weave in an hour what a hand weaver might take a day to complete, and a mass-produced cup costs a fraction of the price of a pot thrown on a wheel."
+          },
+          {
+            "id": "R2Q4",
+            "type": "tfng",
+            "prompt": "Young people stayed in villages to continue craft work.",
+            "answer": "False",
+            "evidence": "Young people, in particular, left villages for jobs in factories and offices, and the chain of knowledge that passed from master to apprentice was broken."
+          },
+          {
+            "id": "R2Q5",
+            "type": "mcq",
+            "prompt": "In the twentieth century, handmade objects were often seen as",
+            "options": [
+              "A modern and desirable",
+              "B old-fashioned",
+              "C expensive luxuries",
+              "D works of art"
+            ],
+            "answer": "B old-fashioned",
+            "evidence": "For much of the twentieth century, handmade objects were seen as old-fashioned, while factory products seemed modern and desirable."
+          },
+          {
+            "id": "R2Q6",
+            "type": "tfng",
+            "prompt": "Some consumers now value objects that are unique, durable, and made with care.",
+            "answer": "True",
+            "evidence": "As more goods became identical and disposable, some consumers began to value objects that were unique, durable, and made with care."
+          },
+          {
+            "id": "R2Q7",
+            "type": "completion",
+            "prompt": "A well-made wooden chair can be used for ______ (ONE WORD ONLY)",
+            "answer": "decades",
+            "alternatives": [
+              "decades."
+            ],
+            "evidence": "A well-made wooden chair, for example, can be used for decades, while a cheap flat-pack chair may be thrown away after a few years."
+          },
+          {
+            "id": "R2Q8",
+            "type": "mcq",
+            "prompt": "How has social media helped crafts?",
+            "options": [
+              "A It has made handmade goods cheaper to produce",
+              "B It allows makers to show their work to customers worldwide",
+              "C It has replaced the need for workshops",
+              "D It has lowered the price of raw materials"
+            ],
+            "answer": "B It allows makers to show their work to customers worldwide",
+            "evidence": "Social media allows a potter in a small village to show her work to customers all over the world, and online shops make it possible to sell directly, without a middleman taking most of the profit."
+          },
+          {
+            "id": "R2Q9",
+            "type": "tfng",
+            "prompt": "The internet has destroyed all local crafts.",
+            "answer": "False",
+            "evidence": "In this way, the internet, which many feared would destroy local crafts, has helped to keep some of them alive."
+          },
+          {
+            "id": "R2Q10",
+            "type": "mcq",
+            "prompt": "What do regional craft labels do?",
+            "options": [
+              "A They certify that a product is genuinely handmade in that area",
+              "B They set the price of all craft goods",
+              "C They provide free equipment to workshops",
+              "D They train tourists to make crafts"
+            ],
+            "answer": "A They certify that a product is genuinely handmade in that area",
+            "evidence": "Some regions have created labels that certify that a product is genuinely handmade in that area, which helps customers trust what they are buying and allows makers to charge a fair price."
+          },
+          {
+            "id": "R2Q11",
+            "type": "tfng",
+            "prompt": "Tourism has helped crafts because visitors buy local crafts as souvenirs.",
+            "answer": "True",
+            "evidence": "Tourism has also helped: visitors often want to buy a local craft as a souvenir, and craft demonstrations have become a popular attraction."
+          },
+          {
+            "id": "R2Q12",
+            "type": "mcq",
+            "prompt": "What is the main challenge for the future of traditional crafts?",
+            "options": [
+              "A Training new makers and making craft a realistic career",
+              "B Finding cheaper raw materials",
+              "C Building more museums",
+              "D Reducing the number of craft fairs"
+            ],
+            "answer": "A Training new makers and making craft a realistic career",
+            "evidence": "The challenge, therefore, is not simply to sell more handmade goods, but to train new makers and to make craft a realistic career."
+          },
+          {
+            "id": "R2Q13",
+            "type": "ynng",
+            "prompt": "The writer suggests that nostalgia alone will keep a workshop open.",
+            "answer": "No",
+            "evidence": "Those who are doubtful point out that a craft survives only if it can pay for itself, and that nostalgia alone will not keep a workshop open."
+          }
+        ]
+      },
+      {
+        "id": "R3",
+        "title": "How cities manage water",
+        "text": "Water is the most basic need of any city, yet providing it reliably is becoming one of the greatest challenges of modern urban life. As cities grow, demand rises, while climate change makes rainfall less predictable and more extreme. Some cities face long droughts, others face sudden floods, and many face both at different times of the year. How cities manage water will shape whether they remain liveable in the coming decades.\n\nFor most of the twentieth century, the approach to urban water was straightforward: build large reservoirs far from the city, pipe the water in, use it once, and then discharge the waste water into a river or the sea. This system worked well when cities were smaller and rainfall was more regular. It also had a hidden cost. Large dams flooded valleys and displaced communities, long pipelines lost water through leaks, and rivers that received treated waste water often suffered from pollution. Above all, the system treated water as a resource to be used and discarded, rather than as a cycle to be managed.\n\nMany cities are now trying a different approach, often called integrated water management. Instead of relying on a single distant source, they use several sources together: rainwater collected from roofs, water recycled from showers and sinks, groundwater, and, where necessary, desalinated sea water. Singapore is a well-known example. The city-state collects rainwater across two-thirds of its land area, treats used water to a very high standard so that it can be reused, and imports some water from a neighbouring country. As a result, Singapore now meets a large share of its own needs, even though it has almost no natural lakes or rivers of its own.\n\nReducing demand is just as important as finding new supplies. In many cities, a large share of water is lost before it ever reaches a tap. Old pipes leak, and in some places, as much as 30 percent of the water entering the system never arrives. Repairing pipes is expensive and disruptive, because it means digging up roads, but cities that have invested in leak detection have saved enormous volumes of water. Smart meters, which show households how much water they use in real time, have also helped people to use less, especially when they are combined with pricing that rises as use increases.\n\nCities are also rethinking how they deal with rain. In the past, the aim was to drain rainwater away as quickly as possible, through concrete channels and underground pipes. This often caused flooding downstream, because the water arrived in a sudden rush. Modern designs try to slow water down and let it soak into the ground. Parks, green roofs, and permeable pavements allow rain to be absorbed where it falls, while ponds and wetlands store water during heavy rain and release it slowly. These green solutions also cool the city in summer and provide space for wildlife and recreation.\n\nNot every city can copy the same model. A city in a wet climate has different problems from a city in a desert, and a wealthy city can afford technologies that a poor city cannot. In many fast-growing cities in Africa and Asia, large numbers of people are not connected to the public water system at all, and they buy water from private sellers at high prices. For these cities, the first priority is basic access, not advanced recycling. Yet the same principle applies everywhere: water must be valued, waste must be reduced, and the natural water cycle must be respected.\n\nThe lesson from cities that have managed water well is that no single technology is enough. Success comes from combining many small measures: fixing leaks, collecting rain, reusing waste water, pricing water fairly, and designing streets and parks that work with rain rather than against it. Above all, it requires long-term planning. A reservoir or a recycling plant takes years to build, and the choices made today will determine whether a city has enough water in twenty or thirty years' time. Water, once taken for granted, has become a test of whether a city can plan for its own future.\n\nTechnology will continue to change what is possible. Cheaper sensors can now detect leaks almost as soon as they appear, and better treatment methods can turn waste water into drinking water safely. Yet technology alone will not solve the problem if people waste water or if planning is short term. The cities that do best are those that treat water as precious, plan decades ahead, and involve their residents in the choices. In the end, managing water is not only an engineering task; it is a test of how wisely a city looks after the resource on which all of its life depends.",
+        "questions": [
+          {
+            "id": "R3Q1",
+            "type": "tfng",
+            "prompt": "Providing water reliably is becoming one of the greatest challenges of modern urban life.",
+            "answer": "True",
+            "evidence": "As cities grow, demand rises, while climate change makes rainfall less predictable and more extreme."
+          },
+          {
+            "id": "R3Q2",
+            "type": "tfng",
+            "prompt": "The twentieth-century water system treated water as a cycle to be managed.",
+            "answer": "False",
+            "evidence": "Above all, the system treated water as a resource to be used and discarded, rather than as a cycle to be managed."
+          },
+          {
+            "id": "R3Q3",
+            "type": "mcq",
+            "prompt": "What is integrated water management?",
+            "options": [
+              "A Relying on one large reservoir",
+              "B Using several water sources together",
+              "C Piping water in from far away",
+              "D Discharging waste water into the sea"
+            ],
+            "answer": "B Using several water sources together",
+            "evidence": "Instead of relying on a single distant source, they use several sources together: rainwater collected from roofs, water recycled from showers and sinks, groundwater, and, where necessary, desalinated sea water."
+          },
+          {
+            "id": "R3Q4",
+            "type": "completion",
+            "prompt": "Singapore collects rainwater across two-thirds of its ______ area (ONE WORD ONLY)",
+            "answer": "land",
+            "alternatives": [
+              "land area"
+            ],
+            "evidence": "The city-state collects rainwater across two-thirds of its land area, treats used water to a very high standard so that it can be reused, and imports some water from a neighbouring country."
+          },
+          {
+            "id": "R3Q5",
+            "type": "tfng",
+            "prompt": "Singapore has many natural lakes and rivers of its own.",
+            "answer": "False",
+            "evidence": "As a result, Singapore now meets a large share of its own needs, even though it has almost no natural lakes or rivers of its own."
+          },
+          {
+            "id": "R3Q6",
+            "type": "completion",
+            "prompt": "In some places, as much as 30 percent of water entering the system never ______ (ONE WORD ONLY)",
+            "answer": "arrives",
+            "alternatives": [],
+            "evidence": "Old pipes leak, and in some places, as much as 30 percent of the water entering the system never arrives."
+          },
+          {
+            "id": "R3Q7",
+            "type": "mcq",
+            "prompt": "What have smart meters helped people to do?",
+            "options": [
+              "A Use more water",
+              "B Use less water",
+              "C Pay less for pipes",
+              "D Collect rainwater"
+            ],
+            "answer": "B Use less water",
+            "evidence": "Smart meters, which show households how much water they use in real time, have also helped people to use less, especially when they are combined with pricing that rises as use increases."
+          },
+          {
+            "id": "R3Q8",
+            "type": "tfng",
+            "prompt": "In the past, cities tried to drain rainwater away as quickly as possible.",
+            "answer": "True",
+            "evidence": "In the past, the aim was to drain rainwater away as quickly as possible, through concrete channels and underground pipes."
+          },
+          {
+            "id": "R3Q9",
+            "type": "completion",
+            "prompt": "Modern designs try to slow water down and let it soak into the ______ (ONE WORD ONLY)",
+            "answer": "ground",
+            "alternatives": [],
+            "evidence": "Modern designs try to slow water down and let it soak into the ground."
+          },
+          {
+            "id": "R3Q10",
+            "type": "mcq",
+            "prompt": "Which of these is given as an example of a green solution?",
+            "options": [
+              "A Concrete channels",
+              "B Underground pipes",
+              "C Permeable pavements",
+              "D Large dams"
+            ],
+            "answer": "C Permeable pavements",
+            "evidence": "Parks, green roofs, and permeable pavements allow rain to be absorbed where it falls, while ponds and wetlands store water during heavy rain and release it slowly."
+          },
+          {
+            "id": "R3Q11",
+            "type": "tfng",
+            "prompt": "Every city can copy exactly the same water model.",
+            "answer": "False",
+            "evidence": "Not every city can copy the same model."
+          },
+          {
+            "id": "R3Q12",
+            "type": "mcq",
+            "prompt": "For fast-growing cities where many people are not connected to the public water system, what is the first priority?",
+            "options": [
+              "A Advanced recycling",
+              "B Basic access",
+              "C Desalination",
+              "D Smart meters"
+            ],
+            "answer": "B Basic access",
+            "evidence": "For these cities, the first priority is basic access, not advanced recycling."
+          },
+          {
+            "id": "R3Q13",
+            "type": "tfng",
+            "prompt": "A reservoir or a recycling plant takes years to build.",
+            "answer": "True",
+            "evidence": "A reservoir or a recycling plant takes years to build, and the choices made today will determine whether a city has enough water in twenty or thirty years' time."
+          },
+          {
+            "id": "R3Q14",
+            "type": "ynng",
+            "prompt": "The writer believes that no single technology is enough to manage urban water well.",
+            "answer": "Yes",
+            "evidence": "The lesson from cities that have managed water well is that no single technology is enough."
+          }
+        ]
+      }
+    ]
+  },
+  "writing": {
+    "task1": {
+      "type": "chart",
+      "prompt": "The bar chart below shows the percentage of households in four countries (the UK, Japan, Brazil and Kenya) that had access to the internet in 2010 and in 2024. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+      "chartDescription": "Bar chart: Percentage of households with internet access. UK: 73% in 2010, 97% in 2024. Japan: 78% in 2010, 95% in 2024. Brazil: 31% in 2010, 82% in 2024. Kenya: 9% in 2010, 48% in 2024. In 2010, Japan had the highest figure (78%), followed by the UK (73%), Brazil (31%) and Kenya (9%). By 2024, the UK led at 97%, just ahead of Japan at 95%. Brazil rose sharply to 82%, while Kenya rose to 48%, the largest percentage-point increase after Brazil. All four countries increased, but the gap between the highest and lowest narrowed from 69 points in 2010 to 49 points in 2024.",
+      "imageUrl": null,
+      "minWords": 150
+    },
+    "task2": {
+      "prompt": "Some people believe that technology in the classroom does more harm than good, while others think it is essential for modern education. Discuss both views and give your own opinion. Write at least 250 words.",
+      "minWords": 250
+    }
+  },
+  "speaking": {
+    "part1": [
+      "Where is your hometown?",
+      "What do you like most about your hometown?",
+      "Do you think your hometown has changed much in recent years?",
+      "What is a typical day like for you?",
+      "Do you prefer mornings or evenings? Why?",
+      "What do you usually have for breakfast?",
+      "Is there a traditional dish from your country that you enjoy?",
+      "Do you prefer eating at home or in a restaurant? Why?",
+      "How often do you cook for yourself?",
+      "What kind of food do you like to try when you travel?",
+      "Do you think people eat more healthily now than in the past?",
+      "Would you like to learn to cook a new dish?"
+    ],
+    "part2": {
+      "topic": "Describe a skill you would like to learn",
+      "prompts": [
+        "You should say:",
+        "what the skill is",
+        "why you would like to learn it",
+        "how you would learn it",
+        "and explain how learning this skill would help you in the future."
+      ]
+    },
+    "part3": [
+      "Why do you think some people find it difficult to learn new skills as adults?",
+      "Do you think schools should teach practical skills as well as academic subjects?",
+      "How has technology changed the way people learn new skills?",
+      "Is it better to learn a skill from a teacher or to teach yourself? Why?",
+      "What skills do you think will be most important for young people in the future?",
+      "Should employers pay for their workers to learn new skills? Why or why not?"
+    ]
+  }
+}

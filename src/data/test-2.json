@@ -1,0 +1,920 @@
+{
+  "id": "test-2",
+  "title": "Sample Test 2 — General Training",
+  "track": "general",
+  "listening": {
+    "sections": [
+      {
+        "id": "L1",
+        "number": 1,
+        "title": "Renting a flat",
+        "audioUrl": null,
+        "transcript": "Good afternoon, Bright Homes Lettings. This is Emma speaking. How can I help you?\nHello, my name is Sophie Lane. I saw a flat advertised on your website, and I would like to ask about it.\nOf course, Miss Lane. Which flat was it?\nIt is a two-bedroom flat on Maple Road. The reference number is BR-284.\nLet me look that up. Yes, here it is: 18 Maple Road, second floor. It is available from the 1st of July. The rent is 950 pounds a month, not including bills.\nThat sounds reasonable. Is the flat furnished?\nYes, it is fully furnished, with a sofa, a dining table, beds, and a washing machine. There is also a small balcony facing the garden.\nThat is good. Is there parking?\nThere is one parking space included, at the back of the building. If you need a second space, it costs an extra 40 pounds a month, but there is a waiting list at the moment.\nOne space is enough. How far is it from the station?\nIt is about a ten-minute walk to Northfield station, and there are buses every fifteen minutes on Maple Road. The city centre is about twenty minutes by bus.\nWhat about the deposit?\nThe deposit is equal to five weeks' rent, which is 1,095 pounds. It will be held in a deposit protection scheme, and you will get it back at the end of the tenancy if there is no damage.\nI see. How long is the tenancy?\nThe usual tenancy is twelve months, with a six-month break clause. That means after six months, either you or the landlord can end the agreement with two months' notice.\nThat is fine. Can I arrange a viewing?\nCertainly. We have viewings on Saturday morning at 10.30, or on Tuesday afternoon at 4.00. Which would suit you better?\nSaturday at 10.30 would be best. Could I bring my sister with me?\nYes, of course. Please bring some identification with you, such as a passport, and proof of your income, for example your last three payslips.\nI can do that. What is your address, so I know where to meet you?\nWe will meet at the flat itself, at 18 Maple Road. The postcode is NF2 6AB. My colleague Tom will meet you there; just ring the bell for Flat 4.\nThank you. One last question: are pets allowed?\nI am afraid not. The landlord does not allow pets in this building, because another tenant has an allergy.\nThat is a shame, but I do not have a pet, so it is not a problem. Thank you for your help. I will see you on Saturday.\nYou are welcome, Miss Lane. We look forward to meeting you.",
+        "questions": [
+          {
+            "id": "L1Q1",
+            "type": "completion",
+            "prompt": "Reference number of the flat: BR-______",
+            "answer": "284",
+            "alternatives": []
+          },
+          {
+            "id": "L1Q2",
+            "type": "completion",
+            "prompt": "The flat is available from the 1st of ______",
+            "answer": "July",
+            "alternatives": [
+              "july"
+            ]
+          },
+          {
+            "id": "L1Q3",
+            "type": "completion",
+            "prompt": "Monthly rent: ______ pounds",
+            "answer": "950",
+            "alternatives": [
+              "950 pounds"
+            ]
+          },
+          {
+            "id": "L1Q4",
+            "type": "mcq",
+            "prompt": "What does the flat have?",
+            "options": [
+              "A A garden",
+              "B A balcony",
+              "C A garage",
+              "D A swimming pool"
+            ],
+            "answer": "B A balcony"
+          },
+          {
+            "id": "L1Q5",
+            "type": "completion",
+            "prompt": "Walking time to Northfield station: ______ minutes",
+            "answer": "ten",
+            "alternatives": [
+              "10"
+            ]
+          },
+          {
+            "id": "L1Q6",
+            "type": "completion",
+            "prompt": "Deposit: ______ pounds",
+            "answer": "1,095",
+            "alternatives": [
+              "1095"
+            ]
+          },
+          {
+            "id": "L1Q7",
+            "type": "mcq",
+            "prompt": "How long is the usual tenancy?",
+            "options": [
+              "A Six months",
+              "B Nine months",
+              "C Twelve months",
+              "D Two years"
+            ],
+            "answer": "C Twelve months"
+          },
+          {
+            "id": "L1Q8",
+            "type": "completion",
+            "prompt": "Viewing on Saturday at ______",
+            "answer": "10.30",
+            "alternatives": [
+              "10:30",
+              "10.30 am"
+            ]
+          },
+          {
+            "id": "L1Q9",
+            "type": "completion",
+            "prompt": "Postcode of the flat: NF2 ______",
+            "answer": "6AB",
+            "alternatives": [
+              "6ab"
+            ]
+          },
+          {
+            "id": "L1Q10",
+            "type": "mcq",
+            "prompt": "Why are pets not allowed?",
+            "options": [
+              "A The landlord dislikes animals",
+              "B Another tenant has an allergy",
+              "C The building is too small",
+              "D Pets damage the furniture"
+            ],
+            "answer": "B Another tenant has an allergy"
+          }
+        ]
+      },
+      {
+        "id": "L2",
+        "number": 2,
+        "title": "A weekend market",
+        "audioUrl": null,
+        "transcript": "Hello, and welcome to this week's guide to the Saturday market in Greenfield. If you are visiting for the first time, this talk will help you plan your visit. The market is held every Saturday in the town square, and it opens at eight o'clock in the morning. It closes at two o'clock in the afternoon, so it is best to arrive early if you want the widest choice, especially for fresh bread and flowers, which often sell out by eleven.\n\nLet me start with the layout. As you enter the square from the High Street, you will find the fruit and vegetable stalls on your left. There are six of these stalls, and they sell produce from farms within twenty miles of the town. Prices are usually lower than in the supermarket, and the sellers are happy to let you taste the fruit before you buy. On your right are the bread and cake stalls. The bakery stall, run by the Miller family, has been at the market for over thirty years, and their sourdough loaf is very popular.\n\nIn the centre of the square are the craft stalls. Here you can buy handmade soap, candles, jewellery, and wooden toys. Many of the makers live locally, and they are glad to talk about how they make their products. If you are looking for a gift, this is the best place to start. Behind the craft stalls, near the fountain, you will find the hot food area. There are stalls selling soup, sandwiches, and pancakes, as well as tea and coffee. There are a few wooden benches here, but they fill up quickly at lunchtime, so many people take their food to the small park behind the town hall.\n\nThere are a few practical things to remember. Most stalls accept cards now, but a few of the smaller ones take cash only, so it is a good idea to bring some coins and small notes. There is a cash machine inside the library, which is open until one o'clock on Saturdays. Dogs are welcome at the market, but they must be kept on a lead. Parking is free in the car park behind the library for the first two hours, and after that it costs two pounds per hour.\n\nFinally, a word about the special events this month. On the first Saturday of each month, there is live music in the square from ten o'clock, performed by local musicians. This Saturday, the Greenfield Folk Group will be playing. There is also a children's activity tent near the fountain, where children can try simple crafts for free. If you have any questions during your visit, look for the volunteers in bright green jackets. They will be happy to help you. Enjoy the market!",
+        "questions": [
+          {
+            "id": "L2Q1",
+            "type": "completion",
+            "prompt": "The market opens at ______ o'clock in the morning",
+            "answer": "eight",
+            "alternatives": [
+              "8"
+            ]
+          },
+          {
+            "id": "L2Q2",
+            "type": "completion",
+            "prompt": "The market closes at ______ o'clock in the afternoon",
+            "answer": "two",
+            "alternatives": [
+              "2"
+            ]
+          },
+          {
+            "id": "L2Q3",
+            "type": "mcq",
+            "prompt": "Where are the fruit and vegetable stalls?",
+            "options": [
+              "A On the right as you enter",
+              "B In the centre of the square",
+              "C On the left as you enter",
+              "D Behind the fountain"
+            ],
+            "answer": "C On the left as you enter"
+          },
+          {
+            "id": "L2Q4",
+            "type": "completion",
+            "prompt": "The bakery stall has been at the market for over ______ years",
+            "answer": "thirty",
+            "alternatives": [
+              "30"
+            ]
+          },
+          {
+            "id": "L2Q5",
+            "type": "mcq",
+            "prompt": "What can visitors buy at the craft stalls?",
+            "options": [
+              "A Fruit and vegetables",
+              "B Bread and cakes",
+              "C Handmade soap and candles",
+              "D Soup and sandwiches"
+            ],
+            "answer": "C Handmade soap and candles"
+          },
+          {
+            "id": "L2Q6",
+            "type": "mcq",
+            "prompt": "Where is the hot food area?",
+            "options": [
+              "A Near the fountain",
+              "B By the library",
+              "C In the car park",
+              "D Behind the town hall"
+            ],
+            "answer": "A Near the fountain"
+          },
+          {
+            "id": "L2Q7",
+            "type": "mcq",
+            "prompt": "What should visitors bring?",
+            "options": [
+              "A A picnic basket",
+              "B Some cash",
+              "C Their own chairs",
+              "D A shopping list"
+            ],
+            "answer": "B Some cash"
+          },
+          {
+            "id": "L2Q8",
+            "type": "completion",
+            "prompt": "Parking is free for the first ______ hours",
+            "answer": "two",
+            "alternatives": [
+              "2"
+            ]
+          },
+          {
+            "id": "L2Q9",
+            "type": "mcq",
+            "prompt": "When is there live music in the square?",
+            "options": [
+              "A Every Saturday",
+              "B On the first Saturday of each month",
+              "C On the last Saturday of each month",
+              "D Only in summer"
+            ],
+            "answer": "B On the first Saturday of each month"
+          },
+          {
+            "id": "L2Q10",
+            "type": "mcq",
+            "prompt": "How can visitors recognise the volunteers?",
+            "options": [
+              "A They wear bright green jackets",
+              "B They carry flags",
+              "C They stand by the fountain",
+              "D They wear name badges"
+            ],
+            "answer": "A They wear bright green jackets"
+          }
+        ]
+      },
+      {
+        "id": "L3",
+        "number": 3,
+        "title": "Planning a group project",
+        "audioUrl": null,
+        "transcript": "Anna: Right, let us get started. We need to plan our group project for the Business Studies course. The topic is starting a small business, and we have to present our business plan in four weeks, on the 15th of July. We also have to hand in a written report of 3,000 words on the same day.\nBen: I think we should first choose what kind of business we want to plan. We talked about a coffee shop last week, but I am not sure it is the best idea. There are already three coffee shops on the High Street.\nCarlos: I agree. What about a bicycle repair shop? There is only one in town, and it is always busy. A lot of students cycle to college, and they often need repairs.\nAnna: That is a good idea. Or we could plan a small online shop selling handmade candles. It would be cheaper to start, because we would not need to rent a shop.\nBen: But the report asks us to include costs for rent and staff, so a shop with a real location might be easier to write about. A bicycle repair shop would need a workshop, tools, and at least two staff.\nCarlos: Let us go with the bicycle repair shop. Now, how should we divide the work? There are three of us, and the report has four main sections: market research, finance, marketing, and operations.\nAnna: I can do the market research. I will design a short survey and ask students at college how often they use their bicycles and what repairs they need. I can aim for at least fifty responses.\nBen: I will take the finance section. I need to work out the start-up costs, such as rent, tools, and insurance, and then estimate how much money the shop would make in the first year.\nCarlos: That leaves marketing and operations for me. That is a lot for one person. Could we share the operations section?\nAnna: Yes, I can help with operations after I finish the survey. I can look at opening hours and suppliers for spare parts.\nBen: Good. We also need to think about the presentation. It is twenty minutes long, and we each need to speak for about the same amount of time. We should practise together at least twice before the 15th.\nCarlos: When should we meet again? How about next Tuesday at three o'clock in the library? By then, Anna should have the survey ready, and I can bring some ideas for the marketing plan.\nAnna: Tuesday at three works for me. Ben, can you bring a first draft of the costs by then?\nBen: I can try, but I need to check the rent for small workshops first. I will look online and call one estate agent this week.\nAnna: One more thing: we need to keep a record of our meetings, because the tutor wants to see how we worked as a group. I will write short notes after each meeting and share them with you both.\nCarlos: That is a good idea. And we should agree on a deadline for the first full draft of the report. How about the 8th of July? That gives us a week to check it and make changes before we hand it in.\nBen: The 8th of July is fine for me. Let us also decide now how we will share files. We can use the college shared drive, so we all have the latest version.\nAnna: Perfect. So, to sum up: bicycle repair shop, Anna on market research, Ben on finance, Carlos on marketing, and we share operations. Next meeting Tuesday at three, first draft on the 8th of July, final deadline the 15th of July.\nCarlos: Sounds good. Let us get to work.\n\nBen: One question I have is about the tutor's feedback. Should we show her our plan before we start writing the full report?\nAnna: Yes, I think that is a good idea. She said in class that she is happy to look at a one-page plan. We can send it to her by email on Friday, after our meeting on Tuesday.\nCarlos: Good idea. If she thinks the bicycle shop is too simple, we will still have time to change direction. But I think it is a strong choice, because it is a real business that students actually use.\nBen: I agree. Let us also decide who will present which part. Anna can present the market research, I can present the finance, and Carlos can present marketing and operations. That way, each of us talks about the part we wrote.\nAnna: That makes sense. We should also prepare for questions at the end. The tutor may ask us about our costs, or about how we would compete with the other repair shop in town.\nCarlos: We can prepare a short list of possible questions and practise answering them together. That will help us feel more confident on the day.",
+        "questions": [
+          {
+            "id": "L3Q1",
+            "type": "completion",
+            "prompt": "The presentation is on the 15th of ______",
+            "answer": "July",
+            "alternatives": [
+              "july"
+            ]
+          },
+          {
+            "id": "L3Q2",
+            "type": "completion",
+            "prompt": "The written report must be ______ words long",
+            "answer": "3,000",
+            "alternatives": [
+              "3000"
+            ]
+          },
+          {
+            "id": "L3Q3",
+            "type": "mcq",
+            "prompt": "What kind of business did the students choose?",
+            "options": [
+              "A A coffee shop",
+              "B A bicycle repair shop",
+              "C An online candle shop",
+              "D A bookshop"
+            ],
+            "answer": "B A bicycle repair shop"
+          },
+          {
+            "id": "L3Q4",
+            "type": "mcq",
+            "prompt": "Why did they reject the coffee shop idea?",
+            "options": [
+              "A It would cost too much",
+              "B There are already three coffee shops on the High Street",
+              "C They do not like coffee",
+              "D The tutor suggested another idea"
+            ],
+            "answer": "B There are already three coffee shops on the High Street"
+          },
+          {
+            "id": "L3Q5",
+            "type": "mcq",
+            "prompt": "Who will do the market research?",
+            "options": [
+              "A Ben",
+              "B Carlos",
+              "C Anna",
+              "D The tutor"
+            ],
+            "answer": "C Anna"
+          },
+          {
+            "id": "L3Q6",
+            "type": "completion",
+            "prompt": "Anna aims to get at least ______ responses to her survey",
+            "answer": "fifty",
+            "alternatives": [
+              "50"
+            ]
+          },
+          {
+            "id": "L3Q7",
+            "type": "mcq",
+            "prompt": "Who will take the finance section?",
+            "options": [
+              "A Anna",
+              "B Ben",
+              "C Carlos",
+              "D All three together"
+            ],
+            "answer": "B Ben"
+          },
+          {
+            "id": "L3Q8",
+            "type": "completion",
+            "prompt": "The next meeting is on Tuesday at ______ o'clock",
+            "answer": "three",
+            "alternatives": [
+              "3"
+            ]
+          },
+          {
+            "id": "L3Q9",
+            "type": "completion",
+            "prompt": "The first full draft of the report is due on the 8th of ______",
+            "answer": "July",
+            "alternatives": [
+              "july"
+            ]
+          },
+          {
+            "id": "L3Q10",
+            "type": "mcq",
+            "prompt": "How will the students share their files?",
+            "options": [
+              "A By email",
+              "B On the college shared drive",
+              "C On paper",
+              "D By text message"
+            ],
+            "answer": "B On the college shared drive"
+          }
+        ]
+      },
+      {
+        "id": "L4",
+        "number": 4,
+        "title": "Workplace safety",
+        "audioUrl": null,
+        "transcript": "Good morning, everyone. Today I am going to talk about workplace safety, and in particular about how to prevent accidents in offices and warehouses. Many people think that serious accidents only happen on building sites or in factories, but in fact, a large number of injuries happen in ordinary workplaces, often because of simple mistakes that could easily have been avoided.\n\nLet us start with the most common cause of injury in offices: slips, trips, and falls. These account for around a third of all workplace injuries. The causes are usually very ordinary: a cable across a walkway, a wet floor with no warning sign, or boxes stored in a corridor. The solution is also simple. Cables should be fixed to the floor or run behind desks, spills should be cleaned up immediately and marked with a sign, and corridors should always be kept clear. If you see a hazard, do not walk past it. Report it to your supervisor or to the health and safety officer the same day.\n\nThe second major risk is manual handling, which means lifting, carrying, or moving heavy objects. Back injuries are very common, and they can cause long-term pain. The first rule is to think before you lift: is the object too heavy for one person? If it is, ask for help or use a trolley. When you do lift, bend your knees, keep your back straight, and hold the object close to your body. Never twist while you are carrying a heavy load. In our warehouse, there are trolleys and lifting aids available, and all new staff receive training in the first week. If you have not had this training, please speak to your manager.\n\nFire safety is the third area I want to cover. Every workplace must have a clear fire evacuation plan, and you should know it before you need it. When you start a new job, find out where the nearest fire exit is, and where the assembly point is outside the building. In this building, the assembly point is in the car park, by the large oak tree. Fire drills are held every six months, and you must take part, even if you are busy. If the fire alarm sounds, leave the building immediately by the nearest safe exit. Do not stop to collect personal belongings, and do not use the lift. Once outside, go to the assembly point and wait until you are told it is safe to return.\n\nFinally, I want to mention stress and tiredness, which are often overlooked as safety risks. A tired worker is more likely to make a mistake, whether that means dropping a heavy box or sending the wrong information to a customer. If you are working long hours, take your breaks. A short break every two hours helps you stay alert, and it is your legal right in most cases. If you feel that your workload is too high, talk to your manager. It is much better to raise the problem early than to wait until an accident happens.\n\nTo finish, remember that safety is everyone's responsibility, not just the manager's. The law requires employers to provide a safe workplace, safe equipment, and proper training, but employees also have a duty to follow safety rules and to look after themselves and their colleagues. If we all pay attention to small details, we can prevent most accidents before they happen. Thank you for listening. Are there any questions?\n\nThere is one more area that deserves attention: working with display screens. Many office workers spend most of the day looking at a computer screen, and this can cause eye strain, headaches, and neck pain. To reduce these problems, position your screen at eye level, about an arm's length away, and take a short break from the screen every hour, even if it is only to look out of the window for a few minutes. Adjust your chair so that your feet are flat on the floor and your lower back is supported. If your chair cannot be adjusted, ask your manager for one that can. Small changes to your workstation can make a large difference over a whole working day, and they cost very little. If you notice persistent pain in your eyes, neck, or wrists, report it early, because problems that are treated early are much easier to solve than problems that are ignored for months. Your employer can arrange a workstation assessment, which takes only a few minutes and can identify simple improvements.",
+        "questions": [
+          {
+            "id": "L4Q1",
+            "type": "mcq",
+            "prompt": "What is the most common cause of injury in offices?",
+            "options": [
+              "A Fire",
+              "B Manual handling",
+              "C Slips, trips, and falls",
+              "D Stress"
+            ],
+            "answer": "C Slips, trips, and falls"
+          },
+          {
+            "id": "L4Q2",
+            "type": "completion",
+            "prompt": "Slips, trips, and falls account for around a ______ of all workplace injuries",
+            "answer": "third",
+            "alternatives": [
+              "one third"
+            ]
+          },
+          {
+            "id": "L4Q3",
+            "type": "mcq",
+            "prompt": "What should you do if you see a hazard?",
+            "options": [
+              "A Walk past it",
+              "B Report it the same day",
+              "C Clean it up next week",
+              "D Tell a colleague only"
+            ],
+            "answer": "B Report it the same day"
+          },
+          {
+            "id": "L4Q4",
+            "type": "mcq",
+            "prompt": "When lifting, what should you do?",
+            "options": [
+              "A Bend your back and keep your knees straight",
+              "B Twist while carrying the load",
+              "C Bend your knees and keep your back straight",
+              "D Hold the object away from your body"
+            ],
+            "answer": "C Bend your knees and keep your back straight"
+          },
+          {
+            "id": "L4Q5",
+            "type": "completion",
+            "prompt": "In this building, the assembly point is in the car park, by the large ______ tree",
+            "answer": "oak",
+            "alternatives": []
+          },
+          {
+            "id": "L4Q6",
+            "type": "completion",
+            "prompt": "Fire drills are held every ______ months",
+            "answer": "six",
+            "alternatives": [
+              "6"
+            ]
+          },
+          {
+            "id": "L4Q7",
+            "type": "mcq",
+            "prompt": "If the fire alarm sounds, what should you NOT do?",
+            "options": [
+              "A Leave by the nearest safe exit",
+              "B Go to the assembly point",
+              "C Use the lift",
+              "D Wait until told it is safe to return"
+            ],
+            "answer": "C Use the lift"
+          },
+          {
+            "id": "L4Q8",
+            "type": "mcq",
+            "prompt": "How often should workers take a short break?",
+            "options": [
+              "A Every hour",
+              "B Every two hours",
+              "C Every four hours",
+              "D Only at lunchtime"
+            ],
+            "answer": "B Every two hours"
+          },
+          {
+            "id": "L4Q9",
+            "type": "mcq",
+            "prompt": "What should you do if your workload feels too high?",
+            "options": [
+              "A Wait until an accident happens",
+              "B Work longer hours",
+              "C Talk to your manager",
+              "D Take a day off without telling anyone"
+            ],
+            "answer": "C Talk to your manager"
+          },
+          {
+            "id": "L4Q10",
+            "type": "mcq",
+            "prompt": "According to the speaker, safety is",
+            "options": [
+              "A only the manager's responsibility",
+              "B everyone's responsibility",
+              "C only the health and safety officer's job",
+              "D not required by law"
+            ],
+            "answer": "B everyone's responsibility"
+          }
+        ]
+      }
+    ]
+  },
+  "reading": {
+    "passages": [
+      {
+        "id": "R1",
+        "title": "Beginners' photography course",
+        "text": "GREENFIELD COMMUNITY CENTRE — NOTICE BOARD\n\nFREE BEGINNERS' PHOTOGRAPHY COURSE\n\nAre you interested in photography but do not know where to start? Join our free six-week course for beginners, starting on Monday 7 July.\n\nClasses run every Monday evening from 6.30 to 8.00 in Room 3 of the Community Centre. You will learn how to use your camera, how to take better portraits and landscapes, and how to edit your photos on a computer. No experience is necessary, and you do not need an expensive camera — a basic digital camera or a phone camera is enough.\n\nThe course is free, but places are limited to 15 people, so please book early. To book, phone 01432 778 901 or visit the Community Centre reception. Please bring your camera to the first class.\n\nThe course is run by local photographer Helen Brooks, who has taught photography for over ten years. All materials are provided, including printed guides to take home.",
+        "questions": [
+          {
+            "id": "R1Q1",
+            "type": "tfng",
+            "prompt": "The photography course lasts for six weeks.",
+            "answer": "True",
+            "evidence": "Join our free six-week course for beginners, starting on Monday 7 July."
+          },
+          {
+            "id": "R1Q2",
+            "type": "mcq",
+            "prompt": "When do the classes run?",
+            "options": [
+              "A Monday mornings",
+              "B Monday evenings",
+              "C Tuesday evenings",
+              "D Saturday mornings"
+            ],
+            "answer": "B Monday evenings",
+            "evidence": "Classes run every Monday evening from 6.30 to 8.00 in Room 3 of the Community Centre."
+          },
+          {
+            "id": "R1Q3",
+            "type": "tfng",
+            "prompt": "You need an expensive camera to join the course.",
+            "answer": "False",
+            "evidence": "No experience is necessary, and you do not need an expensive camera — a basic digital camera or a phone camera is enough."
+          },
+          {
+            "id": "R1Q4",
+            "type": "completion",
+            "prompt": "Places are limited to ______ people (ONE WORD ONLY)",
+            "answer": "15",
+            "alternatives": [
+              "fifteen"
+            ],
+            "evidence": "The course is free, but places are limited to 15 people, so please book early."
+          },
+          {
+            "id": "R1Q5",
+            "type": "mcq",
+            "prompt": "How can you book a place?",
+            "options": [
+              "A By email only",
+              "B By phone or in person at reception",
+              "C Online only",
+              "D At the first class"
+            ],
+            "answer": "B By phone or in person at reception",
+            "evidence": "To book, phone 01432 778 901 or visit the Community Centre reception."
+          },
+          {
+            "id": "R1Q6",
+            "type": "tfng",
+            "prompt": "Helen Brooks has taught photography for over ten years.",
+            "answer": "True",
+            "evidence": "The course is run by local photographer Helen Brooks, who has taught photography for over ten years."
+          },
+          {
+            "id": "R1Q7",
+            "type": "completion",
+            "prompt": "The course starts on Monday 7 ______",
+            "answer": "July",
+            "alternatives": [
+              "july"
+            ],
+            "evidence": "Join our free six-week course for beginners, starting on Monday 7 July."
+          }
+        ]
+      },
+      {
+        "id": "R2",
+        "title": "Second-hand bicycle sale",
+        "text": "FOR SALE: SECOND-HAND BICYCLES\n\nCity Cycles, 24 High Street, is holding a special sale of second-hand bicycles this weekend, Saturday and Sunday, from 9.00 am to 5.00 pm.\n\nAll bicycles have been checked by our mechanics and come with a three-month guarantee. Prices start at £85 for a basic city bike, and most bikes cost between £120 and £250. Children's bikes are available from £60.\n\nWe also offer a free safety check on any bicycle you already own, and a 10% discount on helmets and lights during the sale weekend. If you buy a bicycle, we will fit a lock and lights for free.\n\nPlease note: we cannot accept card payments under £10, so please bring cash for small purchases. No refunds are given on sale items, but faulty bicycles can be exchanged within 14 days. For more information, call 01432 556 210.",
+        "questions": [
+          {
+            "id": "R2Q1",
+            "type": "tfng",
+            "prompt": "The sale is on Saturday and Sunday.",
+            "answer": "True",
+            "evidence": "City Cycles, 24 High Street, is holding a special sale of second-hand bicycles this weekend, Saturday and Sunday, from 9.00 am to 5.00 pm."
+          },
+          {
+            "id": "R2Q2",
+            "type": "completion",
+            "prompt": "All bicycles come with a three-month ______ (ONE WORD ONLY)",
+            "answer": "guarantee",
+            "alternatives": [],
+            "evidence": "All bicycles have been checked by our mechanics and come with a three-month guarantee."
+          },
+          {
+            "id": "R2Q3",
+            "type": "mcq",
+            "prompt": "What is the lowest price for a basic city bike?",
+            "options": [
+              "A £60",
+              "B £85",
+              "C £120",
+              "D £250"
+            ],
+            "answer": "B £85",
+            "evidence": "Prices start at £85 for a basic city bike, and most bikes cost between £120 and £250."
+          },
+          {
+            "id": "R2Q4",
+            "type": "tfng",
+            "prompt": "Children's bikes are available from £60.",
+            "answer": "True",
+            "evidence": "Children's bikes are available from £60."
+          },
+          {
+            "id": "R2Q5",
+            "type": "mcq",
+            "prompt": "What discount is offered during the sale weekend?",
+            "options": [
+              "A 10% off helmets and lights",
+              "B 10% off all bicycles",
+              "C Free helmets",
+              "D 20% off lights"
+            ],
+            "answer": "A 10% off helmets and lights",
+            "evidence": "We also offer a free safety check on any bicycle you already own, and a 10% discount on helmets and lights during the sale weekend."
+          },
+          {
+            "id": "R2Q6",
+            "type": "tfng",
+            "prompt": "Refunds are given on all sale items.",
+            "answer": "False",
+            "evidence": "No refunds are given on sale items, but faulty bicycles can be exchanged within 14 days."
+          },
+          {
+            "id": "R2Q7",
+            "type": "completion",
+            "prompt": "Faulty bicycles can be exchanged within ______ days",
+            "answer": "14",
+            "alternatives": [
+              "fourteen"
+            ],
+            "evidence": "No refunds are given on sale items, but faulty bicycles can be exchanged within 14 days."
+          }
+        ]
+      },
+      {
+        "id": "R3",
+        "title": "Staff handbook — Annual leave",
+        "text": "STAFF HANDBOOK — ANNUAL LEAVE\n\nAll full-time staff are entitled to 25 days of paid annual leave each year, plus public holidays. Part-time staff receive leave in proportion to the hours they work. Leave must be taken in the year in which it is earned, and no more than five days may be carried over to the following year, and only with the written agreement of your manager.\n\nTo request leave, complete the online leave form at least two weeks before the first day of leave. Your manager will normally reply within three working days. Leave cannot be taken during the last week of December, when the office is closed for stocktaking, unless your manager gives special permission.\n\nIf you are ill during your annual leave, you may be able to reclaim those days, but only if you provide a doctor's note. Please contact Human Resources as soon as possible in this situation. Unused leave is not paid at the end of employment, except in the final year of service, when payment may be made for leave that could not be taken for business reasons.",
+        "questions": [
+          {
+            "id": "R3Q1",
+            "type": "completion",
+            "prompt": "Full-time staff are entitled to ______ days of paid annual leave each year",
+            "answer": "25",
+            "alternatives": [
+              "twenty-five"
+            ],
+            "evidence": "All full-time staff are entitled to 25 days of paid annual leave each year, plus public holidays."
+          },
+          {
+            "id": "R3Q2",
+            "type": "tfng",
+            "prompt": "No more than five days of leave may be carried over to the following year.",
+            "answer": "True",
+            "evidence": "Leave must be taken in the year in which it is earned, and no more than five days may be carried over to the following year, and only with the written agreement of your manager."
+          },
+          {
+            "id": "R3Q3",
+            "type": "mcq",
+            "prompt": "How far in advance must leave be requested?",
+            "options": [
+              "A At least one week",
+              "B At least two weeks",
+              "C At least three weeks",
+              "D At least one month"
+            ],
+            "answer": "B At least two weeks",
+            "evidence": "To request leave, complete the online leave form at least two weeks before the first day of leave."
+          },
+          {
+            "id": "R3Q4",
+            "type": "tfng",
+            "prompt": "Leave can always be taken during the last week of December.",
+            "answer": "False",
+            "evidence": "Leave cannot be taken during the last week of December, when the office is closed for stocktaking, unless your manager gives special permission."
+          },
+          {
+            "id": "R3Q5",
+            "type": "mcq",
+            "prompt": "What should you provide if you are ill during annual leave and want to reclaim those days?",
+            "options": [
+              "A A phone call to your manager",
+              "B A doctor's note",
+              "C A form from Human Resources",
+              "D Nothing"
+            ],
+            "answer": "B A doctor's note",
+            "evidence": "If you are ill during your annual leave, you may be able to reclaim those days, but only if you provide a doctor's note."
+          },
+          {
+            "id": "R3Q6",
+            "type": "tfng",
+            "prompt": "Unused leave is always paid at the end of employment.",
+            "answer": "False",
+            "evidence": "Unused leave is not paid at the end of employment, except in the final year of service, when payment may be made for leave that could not be taken for business reasons."
+          },
+          {
+            "id": "R3Q7",
+            "type": "completion",
+            "prompt": "Your manager will normally reply within three ______ days",
+            "answer": "working",
+            "alternatives": [],
+            "evidence": "Your manager will normally reply within three working days."
+          }
+        ]
+      },
+      {
+        "id": "R4",
+        "title": "Staff handbook — Using company computers",
+        "text": "STAFF HANDBOOK — USING COMPANY COMPUTERS\n\nCompany computers are provided for work purposes only. Staff may use the internet for personal reasons during lunch breaks, but only for a short time, and never for shopping or watching videos. Social media sites are blocked on all company computers, and staff should not try to access them.\n\nAll staff must choose a password that is at least eight characters long, with a mixture of letters and numbers, and change it every three months. Passwords must never be shared with colleagues, and they must never be written down on paper near the computer.\n\nIf you receive an email that looks suspicious, or that asks you to click on a link or open an attachment from an unknown sender, do not open it. Report it to the IT department immediately by forwarding it to it-support@company.com. Staff who break these rules may lose access to the company network, and serious cases may lead to disciplinary action.",
+        "questions": [
+          {
+            "id": "R4Q1",
+            "type": "tfng",
+            "prompt": "Company computers are provided for work purposes only.",
+            "answer": "True",
+            "evidence": "Company computers are provided for work purposes only."
+          },
+          {
+            "id": "R4Q2",
+            "type": "mcq",
+            "prompt": "When may staff use the internet for personal reasons?",
+            "options": [
+              "A At any time",
+              "B Only during lunch breaks",
+              "C Only after work",
+              "D Never"
+            ],
+            "answer": "B Only during lunch breaks",
+            "evidence": "Staff may use the internet for personal reasons during lunch breaks, but only for a short time, and never for shopping or watching videos."
+          },
+          {
+            "id": "R4Q3",
+            "type": "tfng",
+            "prompt": "Social media sites are blocked on all company computers.",
+            "answer": "True",
+            "evidence": "Social media sites are blocked on all company computers, and staff should not try to access them."
+          },
+          {
+            "id": "R4Q4",
+            "type": "completion",
+            "prompt": "Passwords must be at least ______ characters long",
+            "answer": "eight",
+            "alternatives": [
+              "8"
+            ],
+            "evidence": "All staff must choose a password that is at least eight characters long, with a mixture of letters and numbers, and change it every three months."
+          },
+          {
+            "id": "R4Q5",
+            "type": "mcq",
+            "prompt": "How often must passwords be changed?",
+            "options": [
+              "A Every month",
+              "B Every three months",
+              "C Every six months",
+              "D Every year"
+            ],
+            "answer": "B Every three months",
+            "evidence": "All staff must choose a password that is at least eight characters long, with a mixture of letters and numbers, and change it every three months."
+          },
+          {
+            "id": "R4Q6",
+            "type": "tfng",
+            "prompt": "Passwords may be shared with colleagues.",
+            "answer": "False",
+            "evidence": "Passwords must never be shared with colleagues, and they must never be written down on paper near the computer."
+          }
+        ]
+      },
+      {
+        "id": "R5",
+        "title": "Why do people collect things?",
+        "text": "Why do so many people collect things? From stamps and coins to old postcards and model trains, collecting is one of the most common hobbies in the world, and it has a surprisingly long history. In the past, only wealthy people could afford to collect: kings and merchants filled rooms with rare objects from distant countries. Today, anyone can start a collection, often for very little money, and the reasons people collect are as varied as the objects themselves.\n\nFor many collectors, the pleasure lies in the search. Finding a rare stamp in a market, or discovering a missing coin at a fair, gives a feeling of excitement that buying something new in a shop rarely provides. Collectors often talk about the thrill of the hunt, and about the patience it requires. A collection may take years, or even decades, to complete, and the collector learns a great deal along the way: about history, geography, art, and the skill of judging whether an object is genuine.\n\nCollecting also helps people to feel connected to the past. An old postcard, for example, is not just a piece of paper; it is a small window into another time. The picture on the front shows how a town looked a hundred years ago, while the message on the back, written in faded ink, tells a personal story. In the same way, a coin from another country can remind a collector of a holiday, or of a relative who lived far away. Objects, in other words, carry memories, and a collection can become a personal museum of a person's life.\n\nThere is a social side to collecting as well. Collectors' clubs and fairs bring together people who share the same interest, and many lasting friendships begin at such events. Online, collectors can join forums, swap items with people in other countries, and ask experts for advice. For some people, especially those who live alone, this community is an important part of the hobby. It gives them a reason to go out, to meet others, and to talk about something they care about.\n\nNot everyone approves of collecting, however. Critics argue that some collectors pay too much for objects that have little practical value, and that the desire to own rare items can encourage theft or the illegal trade in cultural objects. There have been cases, for example, of ancient objects being taken from their country of origin and sold to private collectors, so that they are lost to the public forever. Museums and archaeologists have warned that collecting can, in some cases, damage the very heritage it claims to celebrate.\n\nSupporters reply that most collectors are careful and responsible, and that many collections eventually end up in museums, where the public can enjoy them. They also point out that collecting encourages people to learn and to look closely at the world around them. A child who collects shells, for example, learns to notice differences in shape and colour, and may develop a lasting interest in nature.\n\nWhether collecting is seen as a harmless hobby or as a serious pursuit, it seems unlikely to disappear. As long as people are curious, and as long as they enjoy the feeling of completing a set or finding something rare, collections will continue to grow, in drawers, on shelves, and now, increasingly, in digital form as well.\n\nAnother reason people collect is the wish to preserve things that might otherwise be lost. Old train tickets, theatre programmes, and letters from the past are thrown away every day, yet to a collector they are pieces of history. By keeping them, sorting them, and learning about them, collectors save objects that museums may not have room for. Some of the most important collections of everyday objects in museums today began as private collections, built up slowly by people who simply loved what they collected and wanted to share it with others.\n\nCollecting has also changed with technology. In the past, a collector had to visit markets, fairs, and shops in person, and finding a rare item could take months. Today, a collector can search online in minutes, buy from a seller in another country, and have the item delivered to their door. Some people now collect digital objects, such as photographs, music, or items in online games. These collections take up no physical space, but the feelings they create — pride, excitement, and the wish to complete a set — are very similar to those felt by collectors of stamps or coins a hundred years ago.",
+        "questions": [
+          {
+            "id": "R5Q1",
+            "type": "tfng",
+            "prompt": "In the past, only wealthy people could afford to collect.",
+            "answer": "True",
+            "evidence": "In the past, only wealthy people could afford to collect: kings and merchants filled rooms with rare objects from distant countries."
+          },
+          {
+            "id": "R5Q2",
+            "type": "mcq",
+            "prompt": "For many collectors, what is the main pleasure?",
+            "options": [
+              "A Selling objects for a profit",
+              "B The search for rare items",
+              "C Showing objects to friends",
+              "D Keeping objects in perfect condition"
+            ],
+            "answer": "B The search for rare items",
+            "evidence": "For many collectors, the pleasure lies in the search."
+          },
+          {
+            "id": "R5Q3",
+            "type": "tfng",
+            "prompt": "A collection can usually be completed quickly.",
+            "answer": "False",
+            "evidence": "A collection may take years, or even decades, to complete, and the collector learns a great deal along the way: about history, geography, art, and the skill of judging whether an object is genuine."
+          },
+          {
+            "id": "R5Q4",
+            "type": "completion",
+            "prompt": "An old postcard is described as a small window into another ______ (ONE WORD ONLY)",
+            "answer": "time",
+            "alternatives": [],
+            "evidence": "An old postcard, for example, is not just a piece of paper; it is a small window into another time."
+          },
+          {
+            "id": "R5Q5",
+            "type": "tfng",
+            "prompt": "Objects can carry memories for collectors.",
+            "answer": "True",
+            "evidence": "Objects, in other words, carry memories, and a collection can become a personal museum of a person's life."
+          },
+          {
+            "id": "R5Q6",
+            "type": "mcq",
+            "prompt": "What is one social benefit of collecting?",
+            "options": [
+              "A Collectors can earn a lot of money",
+              "B Collectors' clubs bring together people with a shared interest",
+              "C Collectors never need to leave home",
+              "D Collectors always work alone"
+            ],
+            "answer": "B Collectors' clubs bring together people with a shared interest",
+            "evidence": "Collectors' clubs and fairs bring together people who share the same interest, and many lasting friendships begin at such events."
+          },
+          {
+            "id": "R5Q7",
+            "type": "tfng",
+            "prompt": "All critics agree that collecting is a harmless hobby.",
+            "answer": "False",
+            "evidence": "Not everyone approves of collecting, however."
+          },
+          {
+            "id": "R5Q8",
+            "type": "mcq",
+            "prompt": "What do critics say collecting can encourage?",
+            "options": [
+              "A Theft or the illegal trade in cultural objects",
+              "B Better museums",
+              "C Cheaper prices for old objects",
+              "D More public holidays"
+            ],
+            "answer": "A Theft or the illegal trade in cultural objects",
+            "evidence": "Critics argue that some collectors pay too much for objects that have little practical value, and that the desire to own rare items can encourage theft or the illegal trade in cultural objects."
+          },
+          {
+            "id": "R5Q9",
+            "type": "tfng",
+            "prompt": "Some ancient objects have been taken from their country of origin and sold to private collectors.",
+            "answer": "True",
+            "evidence": "There have been cases, for example, of ancient objects being taken from their country of origin and sold to private collectors, so that they are lost to the public forever."
+          },
+          {
+            "id": "R5Q10",
+            "type": "mcq",
+            "prompt": "What do supporters say about many collections?",
+            "options": [
+              "A They are always sold for profit",
+              "B They eventually end up in museums",
+              "C They are kept secret",
+              "D They lose value over time"
+            ],
+            "answer": "B They eventually end up in museums",
+            "evidence": "Supporters reply that most collectors are careful and responsible, and that many collections eventually end up in museums, where the public can enjoy them."
+          },
+          {
+            "id": "R5Q11",
+            "type": "completion",
+            "prompt": "A child who collects shells may develop a lasting interest in ______ (ONE WORD ONLY)",
+            "answer": "nature",
+            "alternatives": [],
+            "evidence": "A child who collects shells, for example, learns to notice differences in shape and colour, and may develop a lasting interest in nature."
+          },
+          {
+            "id": "R5Q12",
+            "type": "tfng",
+            "prompt": "Collecting seems likely to disappear soon.",
+            "answer": "False",
+            "evidence": "Whether collecting is seen as a harmless hobby or as a serious pursuit, it seems unlikely to disappear."
+          },
+          {
+            "id": "R5Q13",
+            "type": "ynng",
+            "prompt": "The writer believes collectors will continue to collect as long as people enjoy finding something rare.",
+            "answer": "Yes",
+            "evidence": "As long as people are curious, and as long as they enjoy the feeling of completing a set or finding something rare, collections will continue to grow, in drawers, on shelves, and now, increasingly, in digital form as well."
+          }
+        ]
+      }
+    ]
+  },
+  "writing": {
+    "task1": {
+      "type": "letter",
+      "prompt": "You have recently moved into a new flat, and you have discovered that the heating does not work properly. Write a letter to your landlord. In your letter, explain the problem, say how it is affecting you, and ask the landlord to arrange a repair as soon as possible. Write at least 150 words.",
+      "chartDescription": "No chart for this task. This is a letter-writing task: write a formal letter to your landlord about a broken heating system.",
+      "imageUrl": null,
+      "minWords": 150
+    },
+    "task2": {
+      "prompt": "Some people think that governments should invest more money in public transport, while others believe that building more roads is a better way to reduce traffic problems. Discuss both views and give your own opinion. Write at least 250 words.",
+      "minWords": 250
+    }
+  },
+  "speaking": {
+    "part1": [
+      "What do you like to do in your free time?",
+      "Do you have more free time now than you did in the past?",
+      "What is your favourite way to relax after a busy day?",
+      "Do you prefer spending your free time alone or with other people? Why?",
+      "Have you travelled to another country?",
+      "What kind of holidays do you enjoy most?",
+      "Do you prefer travelling by plane, train, or car? Why?",
+      "Is there a place you would like to visit in the future?",
+      "What do you usually do at weekends?",
+      "Do you think people have enough free time nowadays?"
+    ],
+    "part2": {
+      "topic": "Describe a place you like to visit in your free time",
+      "prompts": [
+        "You should say:",
+        "where this place is",
+        "how often you go there",
+        "what you do there",
+        "and explain why you like visiting this place."
+      ]
+    },
+    "part3": [
+      "Why do you think leisure time is important for people's health?",
+      "Do you think tourism brings more benefits or more problems to a place?",
+      "How has the way people spend their free time changed in recent years?",
+      "Should governments spend money on parks and leisure facilities? Why or why not?",
+      "What are the advantages and disadvantages of travelling abroad for a holiday?",
+      "Do you think people will travel more or less in the future? Why?"
+    ]
+  }
+}
