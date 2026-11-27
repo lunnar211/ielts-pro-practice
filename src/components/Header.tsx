@@ -8,6 +8,8 @@ import { Moon, Sun, Type } from "lucide-react";
 const NAV_LINKS = [
   { href: "/", label: "Home" },
   { href: "/practice", label: "Practice" },
+  { href: "/calculator", label: "Calculator" },
+  { href: "/band-descriptors", label: "Band Guide" },
   { href: "/dashboard", label: "Dashboard" },
 ];
 

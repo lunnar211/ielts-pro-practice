@@ -36,6 +36,17 @@ progress dashboard. Academic and General Training tracks.
 - **No sign-in, no admin panel** — everything is free and open. Attempts
   are saved on the device (localStorage) and the dashboard reads them from
   there. No account is needed to practise.
+- **Score Calculator** — turn Listening/Reading marks out of 40 into bands
+  with the official conversion tables, see what you need for a target band,
+  and learn how the overall band is rounded. Tables verified against IDP /
+  British Council / IELTS sources (27 Nov 2026).
+- **Band Descriptors Guide** — the four marking criteria for Writing and
+  Speaking in plain words for Bands 5–9, the 9-band scale, and an original
+  Band 7 sample essay with examiner-style comments.
+- **Descriptor-grounded AI marking** — Writing/Speaking prompts carry
+  Band 6/7/8 anchors and the official hard rules (20 words or fewer is Band
+  1; copied task words do not count as your own vocabulary), so marks stay
+  honest and justified.
 
 ## Tech stack (all free)
 

@@ -45,7 +45,18 @@ export interface SpeakingMarkingResult extends AIMarkingResult {
   pronunciationNote: string;
 }
 
-const EXAMINER_CORE = `You are a certified, strict IELTS examiner applying the official public IELTS band descriptors (Bands 1–9). Be strict and honest: never inflate scores, never award a band the evidence does not support, and never give the benefit of the doubt on grammar or vocabulary errors. Every criterion score MUST be justified with evidence quoted directly from the student's answer — quote the exact words or phrases that support the score. Scores must be in half-band steps (for example 5.0, 5.5, 6.0) between 0 and 9. Reply with strict JSON only: one JSON object, no markdown fences, no commentary outside the JSON.`;
+const EXAMINER_CORE = `You are a certified, strict IELTS examiner applying the official public IELTS band descriptors (Bands 1–9). Be strict and honest: never inflate scores, never award a band the evidence does not support, and never give the benefit of the doubt on grammar or vocabulary errors. Every criterion score MUST be justified with evidence quoted directly from the student's answer — quote the exact words or phrases that support the score. In each justification, name which band-level features are present and which are missing. Scores must be in half-band steps (for example 5.0, 5.5, 6.0) between 0 and 9. Reply with strict JSON only: one JSON object, no markdown fences, no commentary outside the JSON.`;
+
+// Short band-level anchors, written in plain words from the official public
+// band descriptors. They give the model concrete anchors for Bands 6–8 so
+// it does not drift upward or invent its own scale.
+const BAND_ANCHORS = `
+Band anchors (plain words, from the official public descriptors):
+- Band 8: answers every part well; ideas well developed and supported; wide vocabulary used fluently; wide grammar range, mostly error-free; linking is skilful.
+- Band 7: answers all parts; clear position throughout; main ideas extended and supported; enough vocabulary with some less common words; a good mix of simple and complex sentences with frequent error-free sentences.
+- Band 6: answers all parts but some more fully than others; position is clear; ideas are organised but progress is not always clear; vocabulary is adequate but often simple or repeated; a mix of sentence types with errors that usually do not block meaning.
+- Band 5: answers the question only in part; position is not always clear; organisation is weak; limited vocabulary with frequent errors; mostly simple sentences with frequent grammar errors.
+Hard rules from the descriptors: a response of 20 words or fewer is Band 1 on every criterion. Words copied from the task prompt do not count as the student's own vocabulary. A candidate earns a band only by showing all of that band's positive features — one strong feature does not lift the band if another is missing.`;
 
 const WRITING_JSON_SHAPE = `Return a JSON object with exactly these fields:
 {
@@ -82,6 +93,7 @@ You are marking IELTS Writing Task 1 (${"Academic chart/table/map/process descri
 4. Grammatical Range and Accuracy — range of sentence structures and accuracy of grammar and punctuation.
 
 Penalise under-length answers: below 150 words the Task Achievement band must drop. A missing overview in an Academic task, or a missing/wrong tone or format in a letter, caps Task Achievement at Band 5.0 or below. Do not reward memorised phrases that do not fit the data or the letter's purpose.
+${BAND_ANCHORS}
 
 ${WRITING_JSON_SHAPE}
 The "criteria" array must contain exactly these four names in order: "Task Achievement", "Coherence and Cohesion", "Lexical Resource", "Grammatical Range and Accuracy".`;
@@ -95,6 +107,7 @@ You are marking IELTS Writing Task 2 (essay). Mark against these four criteria, 
 4. Grammatical Range and Accuracy — range of sentence structures and accuracy of grammar and punctuation.
 
 Penalise under-length answers: below 250 words the Task Response band must drop. An essay that discusses only one side when the question asks for both views, or that gives no clear opinion when one is asked for, caps Task Response at Band 5.0 or below. Do not reward memorised essays that do not answer this exact question.
+${BAND_ANCHORS}
 
 ${WRITING_JSON_SHAPE}
 The "criteria" array must contain exactly these four names in order: "Task Response", "Coherence and Cohesion", "Lexical Resource", "Grammatical Range and Accuracy".`;
@@ -106,6 +119,7 @@ You are marking an IELTS Speaking test from a TRANSCRIPT of what the student sai
 2. Lexical Resource — range and accuracy of vocabulary, collocation, idiomatic language, paraphrasing.
 3. Grammatical Range and Accuracy — range of sentence structures and accuracy of grammar.
 4. Pronunciation — estimated from the transcript only (see above); state clearly in the justification that this is an estimate.
+${BAND_ANCHORS}
 
 Return a JSON object with exactly these fields:
 {

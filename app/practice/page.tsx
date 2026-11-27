@@ -87,13 +87,19 @@ export default function PracticePage() {
       </article>
 
       <p className="mt-8 text-sm text-slate-500 dark:text-slate-400">
-        Your attempts are saved to your account when you are signed in, or on
-        this device when you are not. See your progress on the{" "}
+        Your attempts are saved on this device. See your progress on the{" "}
         <Link
           href="/dashboard"
           className="font-medium text-brand-600 hover:underline dark:text-brand-400"
         >
           dashboard
+        </Link>{" "}
+        — and work out what your marks mean with the{" "}
+        <Link
+          href="/calculator"
+          className="font-medium text-brand-600 hover:underline dark:text-brand-400"
+        >
+          score calculator
         </Link>
         .
       </p>

@@ -146,6 +146,47 @@ export default function HomePage() {
         </Link>
       </section>
 
+      {/* Understand your score */}
+      <section className="mx-auto max-w-6xl px-4 pb-16">
+        <h2 className="text-center text-2xl font-bold sm:text-3xl">
+          Understand your score
+        </h2>
+        <p className="mx-auto mt-3 max-w-xl text-center text-slate-600 dark:text-slate-300">
+          Know how IELTS turns your answers into a band — and what each band
+          means — before test day.
+        </p>
+        <div className="mt-8 grid gap-6 sm:grid-cols-2">
+          <article className="rounded-xl border border-slate-200 bg-slate-50 p-6 dark:border-slate-800 dark:bg-slate-900">
+            <h3 className="text-lg font-semibold">Score Calculator</h3>
+            <p className="mt-2 text-sm leading-relaxed text-slate-600 dark:text-slate-300">
+              Turn your practice marks into bands with the official conversion
+              tables, see what you need for your target band, and learn how
+              the overall band is rounded.
+            </p>
+            <Link
+              href="/calculator"
+              className="mt-4 inline-flex items-center gap-2 font-semibold text-brand-600 hover:text-brand-700"
+            >
+              Open the calculator <ArrowRight className="h-4 w-4" />
+            </Link>
+          </article>
+          <article className="rounded-xl border border-slate-200 bg-slate-50 p-6 dark:border-slate-800 dark:bg-slate-900">
+            <h3 className="text-lg font-semibold">Band Descriptors Guide</h3>
+            <p className="mt-2 text-sm leading-relaxed text-slate-600 dark:text-slate-300">
+              The four marking criteria for Writing and Speaking, explained in
+              plain words for Bands 5 to 9 — plus a Band 7 sample essay with
+              examiner-style comments.
+            </p>
+            <Link
+              href="/band-descriptors"
+              className="mt-4 inline-flex items-center gap-2 font-semibold text-brand-600 hover:text-brand-700"
+            >
+              Read the guide <ArrowRight className="h-4 w-4" />
+            </Link>
+          </article>
+        </div>
+      </section>
+
       {/* Free practice CTA */}
       <section className="mx-auto max-w-6xl px-4 pb-20">
         <div className="rounded-2xl bg-brand-600 px-6 py-12 text-center text-white sm:px-12">
