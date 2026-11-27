@@ -30,7 +30,6 @@ const MODULES = ["listening", "reading", "writing", "speaking"] as const;
 export default function DashboardPage() {
   const [attempts, setAttempts] = useState<Attempt[]>([]);
   const [loading, setLoading] = useState(true);
-  const [signedIn, setSignedIn] = useState(false);
   const [targetBand, setTargetBand] = useState(7.0);
   const [targetSaved, setTargetSaved] = useState<string | null>(null);
 
@@ -70,7 +69,6 @@ export default function DashboardPage() {
                 .maybeSingle(),
             ]);
             if (cancelled) return;
-            setSignedIn(true);
             if (!attemptRows.error && attemptRows.data) {
               setAttempts(
                 (attemptRows.data as Record<string, unknown>[]).map(
@@ -240,9 +238,7 @@ export default function DashboardPage() {
     <div className="mx-auto max-w-6xl px-4 py-10">
       <h1 className="text-2xl font-bold text-slate-900 dark:text-white">Dashboard</h1>
       <p className="mt-1 text-sm text-slate-600 dark:text-slate-300">
-        {signedIn
-          ? "Attempts saved to your account."
-          : "Attempts saved on this device. Sign in to keep them in your account."}
+        Attempts saved on this device. Everything is free — no account needed.
       </p>
 
       <div className="mt-6 grid grid-cols-2 gap-4 lg:grid-cols-4">

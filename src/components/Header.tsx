@@ -9,7 +9,6 @@ const NAV_LINKS = [
   { href: "/", label: "Home" },
   { href: "/practice", label: "Practice" },
   { href: "/dashboard", label: "Dashboard" },
-  { href: "/admin", label: "Admin" },
 ];
 
 export default function Header() {
@@ -72,12 +71,6 @@ export default function Header() {
           >
             {mounted && theme === "dark" ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
           </button>
-          <Link
-            href="/auth/login"
-            className="hidden rounded-md bg-brand-600 px-4 py-2 text-sm font-semibold text-white hover:bg-brand-700 sm:inline-block"
-          >
-            Sign in
-          </Link>
         </div>
       </div>
       <nav
@@ -93,12 +86,6 @@ export default function Header() {
             {link.label}
           </Link>
         ))}
-        <Link
-          href="/auth/login"
-          className="whitespace-nowrap text-sm font-semibold text-brand-600"
-        >
-          Sign in
-        </Link>
       </nav>
     </header>
   );

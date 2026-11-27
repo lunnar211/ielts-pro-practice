@@ -33,12 +33,9 @@ progress dashboard. Academic and General Training tracks.
 - **Dashboard** — target-band tracker, test history, band progress chart,
   weakest question types, day streak, and a per-attempt result page with a
   radar chart and a downloadable PDF report (jsPDF).
-- **Admin / teacher panel** — upload Reading passages (JSON), Listening
-  audio (mp3) with transcripts, create Writing prompts and Speaking cue
-  cards, review all student attempts and leave comments on them.
-- **Accounts are optional** — signed-out users practise freely and their
-  attempts are saved on the device (localStorage). Signed-in users get their
-  attempts, target band and progress saved to their account (Supabase).
+- **No sign-in, no admin panel** — everything is free and open. Attempts
+  are saved on the device (localStorage) and the dashboard reads them from
+  there. No account is needed to practise.
 
 ## Tech stack (all free)
 
@@ -167,7 +164,6 @@ To make a user a teacher or admin, update their row in the `profiles` table
 ```
 app/
   page.tsx                    Landing page
-  auth/login, auth/signup     Email + Google sign-in
   practice/                   Practice index, per-module test lists
     listening/[testId]        Listening exam page
     reading/[testId]          Reading exam page
@@ -177,7 +173,6 @@ app/
     mock/[testId]             Full mock test (Listening → Reading → Writing → Speaking)
   dashboard/                  Student dashboard (history, chart, streak, target band)
     attempt/[id]              Result detail page + PDF report
-  admin/                      Teacher/admin panel
   api/ai/
     mark-writing/             Writing AI marking (Groq → Gemini, with rate limits)
     mark-speaking/            Speaking AI marking
@@ -221,8 +216,7 @@ AI marking is the only part that costs anything, so it is guarded:
   teacher needs to add a free API key. Listening and Reading marking never
   needs AI — it is instant and unlimited.
 - When Supabase is not configured, the site keeps working: attempts are
-  saved on the device, the dashboard reads them from localStorage, and the
-  admin panel shows setup instructions instead of broken forms.
+  saved on the device and the dashboard reads them from localStorage.
 - Friendly messages are used everywhere instead of raw errors: microphone
   denied ("Microphone access was denied…"), transcription failed, handwriting
   photo unreadable, PDF that cannot be read directly, file over the size
@@ -233,13 +227,12 @@ AI marking is the only part that costs anything, so it is guarded:
 | Problem | What to do |
 | --- | --- |
 | **AI not configured** — Writing/Speaking marking says AI is not set up | Add a free `GROQ_API_KEY` (or `GEMINI_API_KEY`) to `.env.local` and restart `npm run dev`, or add it in Vercel and redeploy. Either key alone works. |
-| **Supabase not configured** — admin panel shows setup instructions, attempts only on this device | Copy `.env.example` to `.env.local`, fill in `NEXT_PUBLIC_SUPABASE_URL` + `NEXT_PUBLIC_SUPABASE_ANON_KEY`, restart the dev server. Run `supabase/schema.sql` in the Supabase SQL editor first. |
-| **Sign-in fails / Google sign-in loops** | Check the Google provider is enabled in Supabase (Authentication → Providers) and that the Supabase callback URL is in the Google OAuth client's authorised redirect URIs. |
+| **Supabase not configured** — attempts only on this device | Copy `.env.example` to `.env.local`, fill in `NEXT_PUBLIC_SUPABASE_URL` + `NEXT_PUBLIC_SUPABASE_ANON_KEY`, restart the dev server. Run `supabase/schema.sql` in the Supabase SQL editor first. |
 | **"Too many requests" when marking** | The free-tier rate limit was hit. Wait a minute and submit again — your answers are kept. |
 | **Microphone not working (Speaking)** | Allow microphone access when the browser asks. The test needs `https` (or `localhost`) — on plain `http` the browser blocks the microphone. As a fallback, upload an audio file (mp3/wav/m4a) instead of recording. |
 | **Text-to-speech doesn't play (Listening)** | Your browser needs speech synthesis voices; check the device volume and that no other tab is speaking. If a real mp3 is uploaded for the section, it plays instead of TTS. |
 | **Listening audio won't play in the mock** | Each section plays once by design. If the browser blocked autoplay, click the Play button — and check the file was uploaded to the `audio` bucket. |
-| **Dashboard is empty after a test** | Signed-out attempts live only on the device where the test was taken. Sign in before practising to keep attempts in your account. |
+| **Dashboard is empty after a test** | Attempts live only on the device where the test was taken. |
 | **PDF report won't download** | Allow downloads/pop-ups for the site; the report is built in the browser with jsPDF. |
 | **Build fails with a missing seed file** | `src/data/test-1.json` and `test-2.json` must exist — `src/lib/seed.ts` throws a clear error naming the missing file. |
 

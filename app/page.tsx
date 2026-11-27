@@ -79,10 +79,10 @@ export default function HomePage() {
             Take a free sample test <ArrowRight className="h-4 w-4" />
           </Link>
           <Link
-            href="/auth/signup"
+            href="/practice"
             className="rounded-md border border-slate-300 px-6 py-3 font-semibold text-slate-700 hover:bg-slate-50 dark:border-slate-700 dark:text-slate-200 dark:hover:bg-slate-800"
           >
-            Create a free account
+            Browse all practice tests
           </Link>
         </div>
         <p className="mt-4 text-sm text-slate-500 dark:text-slate-400">
@@ -146,21 +146,22 @@ export default function HomePage() {
         </Link>
       </section>
 
-      {/* Sign-up CTA */}
+      {/* Free practice CTA */}
       <section className="mx-auto max-w-6xl px-4 pb-20">
         <div className="rounded-2xl bg-brand-600 px-6 py-12 text-center text-white sm:px-12">
           <h2 className="text-2xl font-bold sm:text-3xl">
             Ready to reach your target band?
           </h2>
           <p className="mx-auto mt-3 max-w-xl text-brand-100">
-            Create a free account to save your attempts, track your progress
-            and unlock AI marking on every Writing and Speaking task.
+            Everything here is free — practise all four modules, get instant
+            band scores and AI marking on every Writing and Speaking task. No
+            account needed.
           </p>
           <Link
-            href="/auth/signup"
+            href="/practice"
             className="mt-6 inline-block rounded-md bg-white px-6 py-3 font-semibold text-brand-700 hover:bg-brand-50"
           >
-            Sign up free
+            Start practising free
           </Link>
         </div>
       </section>
